@@ -25,7 +25,7 @@ mysqli_set_charset($conn, "utf8mb4");
 <head>
     <title>雪山東峰單攻 - DiAriEs </title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
