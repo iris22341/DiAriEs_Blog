@@ -1,4 +1,6 @@
 <?php
+// 強制設定時區為台北 (台灣時間)
+date_default_timezone_set('Asia/Taipei');
 // 1. 取得 Railway 連線字串 (這必須是檔案的第一行，前面不能有任何東西)
 $db_url = getenv("DATABASE_URL");
 if ($db_url) {
