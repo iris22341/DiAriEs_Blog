@@ -1,23 +1,4 @@
 <?php
-// 1. 設定時區
-date_default_timezone_set('Asia/Taipei');
-
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
-    $name = mysqli_real_escape_string($conn, $_POST['name']);
-    $content = mysqli_real_escape_string($conn, $_POST['content']);
-    
-    // 2. 手動產生台灣現在的時間字串
-    $current_time = date("Y-m-d H:i:s");
-
-    // 3. 寫入 SQL 時，手動指定時間欄位（假設欄位叫 created_at）
-    $sql_insert = "INSERT INTO `guestbook` (name, content, created_at) VALUES ('$name', '$content', '$current_time')";
-
-    if (mysqli_query($conn, $sql_insert)) {
-        header("Location: " . $_SERVER['PHP_SELF']);
-        exit;
-    }
-}
-
 // 1. 取得 Railway 連線字串 (這必須是檔案的第一行，前面不能有任何東西)
 $db_url = getenv("DATABASE_URL");
 if ($db_url) {
