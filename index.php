@@ -237,7 +237,7 @@
         <div class="category-info">
             <h3>⛰️ DiAriEs about 爬山</h3>
             <ul class="article-list">
-                <li><a href="post/mtsyue_DiArIEs.php">雪山東峰單攻紀錄</a><span class="article-date">2025/11/23</span></li>
+                <li><a href="/post/mtsyue_DiArIEs.php">雪山東峰單攻紀錄</a><span class="article-date">2025/11/23</span></li>
                 <li><p>To be continued......</p></li>
             </ul>
         </div>
