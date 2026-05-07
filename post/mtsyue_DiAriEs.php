@@ -341,7 +341,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
             <h3>看看大家怎麼說</h3>
             <?php
             // --- 步驟 2：讀取留言 ---
-            $sql_select = "SELECT * FROM 'guestbook' ORDER BY id DESC"; 
+            $sql_select = "SELECT * FROM guestbook ORDER BY id DESC"; 
             $result = mysqli_query($conn, $sql_select);
 
             if ($result && mysqli_num_rows($result) > 0) {
