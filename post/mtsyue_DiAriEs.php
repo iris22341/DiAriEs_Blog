@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
     $content = mysqli_real_escape_string($conn, $_POST['content']);
 
     // 請務必確認這裡的資料表名稱與資料庫一致
-    $sql_insert = "INSERT INTO `messages` (name, content) VALUES ('$name', '$content')";
+    $sql_insert = "INSERT INTO `guestbook` (name, content) VALUES ('$name', '$content')";
 
     if (mysqli_query($conn, $sql_insert)) {
         // 寫入成功後重新導向，避免重複送出
