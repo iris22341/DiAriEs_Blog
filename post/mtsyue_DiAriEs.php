@@ -1,31 +1,31 @@
 <?php
-// 取得 Railway 自動提供的連線字串
+// 1. 取得 Railway 連線字串 (這必須是檔案的第一行，前面不能有任何東西)
 $db_url = getenv("DATABASE_URL");
 if ($db_url) {
     $url = parse_url($db_url);
     $conn = mysqli_connect($url["host"], $url["user"], $url["pass"], substr($url["path"], 1), $url["port"]);
     mysqli_set_charset($conn, "utf8mb4");
 }
-?>
 
-<?php
-// --- 處理表單送出 ---
+// 2. 緊接著處理表單送出 (不要關閉 PHP 標籤，直接寫下來)
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
     $name = mysqli_real_escape_string($conn, $_POST['name']);
     $content = mysqli_real_escape_string($conn, $_POST['content']);
 
-    // 請務必確認這裡的資料表名稱與資料庫一致
+    // 確認資料表名稱為 guestbook
     $sql_insert = "INSERT INTO `guestbook` (name, content) VALUES ('$name', '$content')";
 
     if (mysqli_query($conn, $sql_insert)) {
-        // 寫入成功後重新導向，避免重複送出
+        // 因為還沒有任何 HTML 輸出，這次跳轉會成功！
         header("Location: " . $_SERVER['PHP_SELF']);
         exit;
     } else {
         echo "寫入失敗：" . mysqli_error($conn);
     }
 }
+// 這裡可以選擇性關閉標籤，或者直接開始寫下方的 HTML
 ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -36,8 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
 </head>
 <body>
 
-
-
+	
 <!-- --- 第二部分：原本的文章與表單 HTML --- -->
 <!DOCTYPE html>
 <html lang="zh-TW">
