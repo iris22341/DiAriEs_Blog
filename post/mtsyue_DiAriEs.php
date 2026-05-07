@@ -8,6 +8,25 @@ if ($db_url) {
 }
 ?>
 
+<?php
+// --- 處理表單送出 ---
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
+    $name = mysqli_real_escape_string($conn, $_POST['name']);
+    $content = mysqli_real_escape_string($conn, $_POST['content']);
+
+    // 請務必確認這裡的資料表名稱與資料庫一致
+    $sql_insert = "INSERT INTO `messages` (name, content) VALUES ('$name', '$content')";
+
+    if (mysqli_query($conn, $sql_insert)) {
+        // 寫入成功後重新導向，避免重複送出
+        header("Location: " . $_SERVER['PHP_SELF']);
+        exit;
+    } else {
+        echo "寫入失敗：" . mysqli_error($conn);
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -323,7 +342,7 @@ if ($db_url) {
             <h3>看看大家怎麼說</h3>
             <?php
             // --- 步驟 2：讀取留言 ---
-            $sql_select = "SELECT * FROM guestbook ORDER BY id DESC"; 
+            $sql_select = "SELECT * FROM 'guestbook' ORDER BY id DESC"; 
             $result = mysqli_query($conn, $sql_select);
 
             if ($result && mysqli_num_rows($result) > 0) {
