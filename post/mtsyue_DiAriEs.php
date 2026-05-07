@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <?php
-// --- 步驟 1：統一資料庫連線與存檔處理 (放在最頂端) ---
-$host = "localhost"; $username = "root"; $password = ""; $dbname = "diaries";
-$conn = mysqli_connect($host, $username, $password, $dbname);
+// --- 步驟 1：統一資料庫連線處理 ---
 
+if (getenv("DATABASE_URL")) {
+    // ☁️ 雲端環境 (Railway)
+    $url = parse_url(getenv("DATABASE_URL"));
+    $conn = mysqli_connect($url["host"], $url["user"], $url["pass"], substr($url["path"], 1), $url["port"]);
+} else {
+    // 💻 本地端環境 (Localhost)
+    $conn = mysqli_connect("localhost", "root", "", "diaries");
+}
+
+// 檢查連線是否成功
 if (!$conn) {
     die("連線失敗：" . mysqli_connect_error());
 }
 
-if (isset($_POST['submit_button'])) {
-    $name = mysqli_real_escape_string($conn, $_POST['name']);
-    $content = mysqli_real_escape_string($conn, $_POST['content']);
-    $sql_insert = "INSERT INTO guestbook (name, content) VALUES ('$name', '$content')";
-    mysqli_query($conn, $sql_insert);
-    header("Location: mtsyue_DiArIEs.php"); 
-    exit();
-}
+// 確保中文字體正確 (重要！)
+mysqli_set_charset($conn, "utf8mb4"); 
 ?>
 
 <!DOCTYPE html>
