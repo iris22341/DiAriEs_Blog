@@ -83,10 +83,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                             <td style="padding: 15px; line-height: 2; vertical-align: middle; font-weight: normal;">
                             T-6 個月
                             </td>
-                            <td style="padding: 15px; line-height: 2; vertical-align: middle; text-align: left;">
+                            <td style="padding: 15px; line-height: 2; vertical-align: middle;">
                             報名
                             </td>
-                            <td style="padding: 15px; line-height: 2; vertical-align: middle; text-align: justify; word-break: break-word;">
+                            <td style="padding: 15px; line-height: 2; vertical-align: middle; word-break: break-word;">
                             1. 隊長到活動報名網頁創一個隊伍，隊員先填自己，再把報名連結分享給隊友們各自填資料<span style="color: red; font-weight: bold;">（建議用這個方式較方便）</span><br>
                             2. 建一個隊友資訊的 Google sheet，由隊長統一報名
                             </td>
