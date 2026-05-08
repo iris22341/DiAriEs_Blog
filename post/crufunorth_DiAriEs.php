@@ -70,7 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
             <h3 id="plan">二、 行前規劃</h3>
             <p><strong>※ 賽事開始日為 T</strong></p>
             <div class="trip-table-wrapper">
-                <table class="trip-table">
+                <table class="trip-table itinerary-table">
                     <thead class="column-header">
                         <tr>
                             <th style="width: 15%;">預計時間</th>
@@ -192,7 +192,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                     <h4 style="border-left: 5px solid #2e7d32; padding-left: 10px; color: #2e7d32; margin-bottom: 15px;">
                         🚩 第01 - 10 棒 (蘇澳 ➔ 福隆)
                     </h4>
-                    <table class="trip-table">
+                    <table class="trip-table gear-table">
                         <thead>
                             <tr class="column-header">
                                 <th>棒次</th><th>距離</th><th>升降</th><th>選手</th><th>時間</th><th>地點</th>
