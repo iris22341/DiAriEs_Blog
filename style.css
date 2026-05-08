@@ -107,6 +107,36 @@ padding-bottom: 15px;
 
 .hero-img { width: 100%; margin-bottom: 40px; }
 
+/* --- 表格的基礎邊框與外觀 --- */
+table {
+    width: 100%;
+    border-collapse: separate; /* 為了讓圓角生效 */
+    border-spacing: 0;
+    border: 1px solid #ddd;   /* 外框線 */
+    border-radius: 12px;      /* 圓角 */
+    overflow: hidden;         /* 確保圓角不被內容撐破 */
+    margin: 20px 0;
+}
+
+/* --- 儲存格的格線與內距 --- */
+th, td {
+    border-right: 1px solid #ddd;  /* 直線 */
+    border-bottom: 1px solid #ddd; /* 橫線 */
+    padding: 12px 15px;            /* 讓文字不要貼著線 */
+    text-align: center;
+}
+
+/* 移除最後一欄的右邊框和最後一列的下邊框 (避免線條過粗) */
+th:last-child, td:last-child { border-right: none; }
+tr:last-child td { border-bottom: none; }
+
+/* --- 標頭底色 --- */
+th {
+    background-color: #f9fbf9; 
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
 /* 針對3欄式表格 */
 .itinerary-table { table-layout: fixed; }
 .itinerary-table th:nth-child(1) { width: 90px; } /* 固定時間 */
@@ -127,6 +157,7 @@ border-radius: var(--radius);
 margin: 30px 0;
 border-left: 5px solid var(--primary-color);
 }
+
 .toc-list { list-style: none; padding: 0; margin: 0; }
 .toc-list li { margin: 8px 0; }
 .toc-list a { text-decoration: none; color: var(--primary-color); font-weight: 500; }
