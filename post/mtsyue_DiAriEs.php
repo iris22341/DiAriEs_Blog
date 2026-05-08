@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
 <body>
 
     <header class="nav-bar">
-        <a href="../index.php"><span>←</span> 返回 DiAriEs</a>
+        <a href="../index.html"><span>←</span> 返回 DiAriEs</a>
     </header>
 
     <article class="content-container">
@@ -93,7 +93,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
             <h4>01. 行前準備</h4>
             <p><strong>(1) 裝備清單</strong></p>
             <div class="trip-table-wrapper">
-                <table class="trip-table itinerary-table">
+                <table class="trip-table">
                     <thead class="column-header">
                         <tr>
                             <th style="width: 33.3%;">必備物品</th>
