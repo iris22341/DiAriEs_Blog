@@ -135,6 +135,19 @@ background: var(--table-time-bg);
 font-weight: 600; 
 width: 80px;
 }
+.trip-table {
+    width: 100%;
+    /* 確保表格內容不會因為字數太少縮得太醜，也不會因為字多撐破 */
+    table-layout: auto; 
+    min-width: 500px; /* 強制在手機版有滾動條，而不是把欄位壓成一條線 */
+}
+
+/* 針對備註欄位 (通常是第3欄) 進行文字微調 */
+.trip-table td:nth-child(3) {
+    text-align: left;
+    word-break: break-all; /* 防止長網址或連續符號撐破欄位 */
+    min-width: 150px;
+}
 
 .gear-box {
 background: #f1f8f1;
