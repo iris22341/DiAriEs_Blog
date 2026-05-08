@@ -70,7 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
             <h3 id="plan">二、 行前規劃</h3>
             <p><strong>※ 賽事開始日為 T</strong></p>
             <div class="trip-table-wrapper">
-                <table class="trip-table itinerary-table">
+                <table class="trip-table">
                     <thead class="column-header">
                         <tr>
                             <th style="width: 15%;">預計時間</th>
@@ -192,7 +192,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                     <h4 style="border-left: 5px solid #2e7d32; padding-left: 10px; color: #2e7d32; margin-bottom: 15px;">
                         🚩 第01 - 10 棒 (蘇澳 ➔ 福隆)
                     </h4>
-                    <table class="trip-table gear-table">
+                    <table class="trip-table">
                         <thead>
                             <tr class="column-header">
                                 <th>棒次</th><th>距離</th><th>升降</th><th>選手</th><th>時間</th><th>地點</th>
@@ -574,7 +574,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
 
                 <li>
                     <p><strong>01:45 第二十三棒出花</strong>。
-                        <br>第一次補給後 Hugo 便跟著陳律跑，我們是到接力區才得知陳律下坡滑倒，好險只有擦傷，人沒大礙，但鞋子挺有事的，底整個磨平，真的該換一雙新鞋，但也恭喜陳律夸父初體驗成功，是第三個正式下班的人。
+                        <br>第一次補給後 Hugo 便跟著陳律跑，我們是到接力區才得知陳律下坡滑倒，好險只有擦傷，人沒大礙，
+                        <br>但鞋子挺有事的，底整個磨平，真的該換一雙新鞋，但也恭喜陳律夸父初體驗成功，是第三個正式下班的人。
                     </p>
                     <figure>
                     <img src="https://lh3.googleusercontent.com/pw/AP1GczMwohmYA7h3CYFwt3L1tDjwHTA4-8AT4TjD5pUS8TsL9b9qEETehcJbBLZho5iwZ0ZZhanB5r4JZw5qoqVTW1IFXc60dZPItYbbqcM5wRro4qfWIH2V=w1200-h1000-p-k" alt="第二十三接力區">
