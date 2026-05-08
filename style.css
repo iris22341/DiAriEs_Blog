@@ -107,48 +107,34 @@ padding-bottom: 15px;
 
 .hero-img { width: 100%; margin-bottom: 40px; }
 
-/* --- 表格的基礎邊框與外觀 --- */
-table {
-    width: 100%;
-    border-collapse: separate; /* 為了讓圓角生效 */
-    border-spacing: 0;
-    border: 1px solid #ddd;   /* 外框線 */
-    border-radius: 12px;      /* 圓角 */
-    overflow: hidden;         /* 確保圓角不被內容撐破 */
-    margin: 20px 0;
+.trip-table-wrapper { overflow-x: auto; margin: 25px 0; }
+.trip-table {
+width: 100%;
+border-collapse: separate;
+border-spacing: 0;
+font-size: 0.95em;
+border: 1px solid #ddd;
+border-radius: 8px;
+overflow: hidden;
+word-break: keep-all;
 }
-
-/* --- 儲存格的格線與內距 --- */
-th, td {
-    border-right: 1px solid #ddd;  /* 直線 */
-    border-bottom: 1px solid #ddd; /* 橫線 */
-    padding: 12px 15px;            /* 讓文字不要貼著線 */
-    text-align: center;
+.trip-table th, .trip-table td {
+border-right: 1px solid #ddd;
+border-bottom: 1px solid #ddd;
+padding: 14px 10px;
+text-align: center;
 }
+.trip-table th:last-child, .trip-table td:last-child { border-right: none; }
+.trip-table tr:last-child td { border-bottom: none; }
+.date-header th { background: var(--table-header-dark); color: #333; }
+.column-header th { background: var(--table-header-light); color: #555; }
 
-/* 移除最後一欄的右邊框和最後一列的下邊框 (避免線條過粗) */
-th:last-child, td:last-child { border-right: none; }
-tr:last-child td { border-bottom: none; }
-
-/* --- 標頭底色 --- */
-th {
-    background-color: #f9fbf9; 
-    color: var(--primary-color);
-    font-weight: bold;
+/* 避免裝備表被強制加粗，僅針對四欄式紀錄表 */
+.timeline-table td:nth-child(odd) { 
+background: var(--table-time-bg); 
+font-weight: 600; 
+width: 80px;
 }
-
-/* 針對3欄式表格 */
-.itinerary-table { table-layout: fixed; }
-.itinerary-table th:nth-child(1) { width: 90px; } /* 固定時間 */
-.itinerary-table th:nth-child(2) { width: 35%; } /* 項目 */
-.itinerary-table th:nth-child(3) { width: 65%; } /* 備註 */
-
-/* 針對4欄式表格 */
-.gear-table { table-layout: fixed; }
-.gear-table th:nth-child(1) { width: 15%; }
-.gear-table th:nth-child(2) { width: 15%; }
-.gear-table th:nth-child(3) { width: 20%; }
-.gear-table th:nth-child(4) { width: 50%; } /* 平均分配或依需求調整 */
 
 .gear-box {
 background: #f1f8f1;
@@ -157,7 +143,6 @@ border-radius: var(--radius);
 margin: 30px 0;
 border-left: 5px solid var(--primary-color);
 }
-
 .toc-list { list-style: none; padding: 0; margin: 0; }
 .toc-list li { margin: 8px 0; }
 .toc-list a { text-decoration: none; color: var(--primary-color); font-weight: 500; }
