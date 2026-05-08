@@ -107,64 +107,18 @@ padding-bottom: 15px;
 
 .hero-img { width: 100%; margin-bottom: 40px; }
 
-/* --- 1. 表格容器與基礎結構 --- */
-.trip-table-wrapper { 
-    overflow-x: auto; 
-    margin: 25px 0; 
-    -webkit-overflow-scrolling: touch; /* 讓手機滑動更順 */
-}
+/* 針對3欄式表格 */
+.itinerary-table { table-layout: fixed; }
+.itinerary-table th:nth-child(1) { width: 90px; } /* 固定時間 */
+.itinerary-table th:nth-child(2) { width: 35%; } /* 項目 */
+.itinerary-table th:nth-child(3) { width: 65%; } /* 備註 */
 
-.trip-table {
-    width: 100%;
-    table-layout: fixed; /* 關鍵：鎖定佈局，才能強制執行 3:7 比例 */
-    border-collapse: separate;
-    border-spacing: 0;
-    font-size: 0.95em;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    min-width: 500px; /* 確保在手機版不會縮得太扁 */
-}
-
-/* --- 2. 欄位寬度精確分配 (1:2:3 = 固定:3:7) --- */
-
-/* 第 1 欄：固定寬度 (預計時間) */
-.trip-table th:nth-child(1), 
-.trip-table td:nth-child(1) { 
-    width: 90px; 
-    background: var(--table-time-bg); 
-    font-weight: 600;
-}
-
-/* 第 2 欄：項目 (佔剩餘空間 30%) */
-.trip-table th:nth-child(2), 
-.trip-table td:nth-child(2) { 
-    width: 30%; 
-}
-
-/* 第 3 欄：備註 (佔剩餘空間 70%) */
-.trip-table th:nth-child(3), 
-.trip-table td:nth-child(3) { 
-    width: 70%; 
-    text-align: left; /* 備註文字較多，靠左對齊較美觀 */
-    word-break: break-all; /* 防止長網址撐破 */
-    white-space: normal; /* 確保文字會自動換行 */
-}
-
-/* --- 3. 儲存格細節與邊框控制 --- */
-.trip-table th, .trip-table td {
-    border-right: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-    padding: 14px 10px;
-    vertical-align: middle; /* 內容垂直置中 */
-}
-
-.trip-table th:last-child, .trip-table td:last-child { border-right: none; }
-.trip-table tr:last-child td { border-bottom: none; }
-
-/* 標頭顏色設定 */
-.date-header th { background: var(--table-header-dark); color: #333; }
-.column-header th { background: var(--table-header-light); color: #555; }
+/* 針對4欄式表格 */
+.gear-table { table-layout: fixed; }
+.gear-table th:nth-child(1) { width: 15%; }
+.gear-table th:nth-child(2) { width: 15%; }
+.gear-table th:nth-child(3) { width: 20%; }
+.gear-table th:nth-child(4) { width: 50%; } /* 平均分配或依需求調整 */
 
 .gear-box {
 background: #f1f8f1;
