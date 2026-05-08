@@ -195,7 +195,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                     <table class="trip-table">
                         <thead>
                             <tr class="column-header">
-                                <th>棒次</th><th>距離</th><th>升降</th><th>選手</th><th>時間</th><th>地點</th>
+                                <th style="width: 14%;">棒次</th>
+								<th style="width: 14%;">距離</th>
+								<th style="width: 14%;">升降</th>
+								<th style="width: 14%;">選手</th>
+								<th style="width: 14%;">時間</th>
+								<th style="width: 30%;">地點</th>
                             </tr>
                         </thead>
                         <tbody>
