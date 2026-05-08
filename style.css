@@ -1,4 +1,4 @@
-/* --- 1. 變數設定 (來自雪山網頁) --- */
+/* --- 1. 變數設定 --- */
 :root {
     --primary-color: #2d5a27;
     --bg-color: #f4f7f1;
@@ -10,87 +10,26 @@
     --radius: 12px;
 }
 
-/* --- 2. 基礎底色與字體 (整合兩者) --- */
+/* --- 2. 全域基礎樣式 --- */
+*, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
     font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
     line-height: 1.8;
     color: #333;
-    background-color: var(--bg-color); /* 統一使用雪山網頁的輕盈底色 */
+    background-color: var(--bg-color);
     margin: 0;
     padding: 20px;
 }
 
-/* --- 3. 留言板專屬樣式 (來自第一段) --- */    
-.container { max-width: 770px; margin: 20px auto; background-color: #fff; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-input[type="text"], textarea { width: 100%; padding: 10px; margin: 10px 0 20px 0; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }
-input[type="submit"] { background-color: #2d5a27; color: white; padding: 12px; border: none; border-radius: 5px; cursor: pointer; width: 100%; }
-.comment-list { margin-top: 40px; border-top: 2px solid #eee; padding-top: 20px; }
-.comment-item { background: #fafafa; border-left: 5px solid #2d5a27; padding: 15px; margin-bottom: 15px; border-radius: 0 5px 5px 0; }
-.comment-info { font-size: 14px; color: #7f8c8d; margin-bottom: 5px; }
-.comment-name { font-weight: bold; color: #2c3e50; }
-.comment-text { line-height: 1.6; color: #34495e; }
-
-/* --- 4. 雪山東峰文章與圖片樣式 (來自第二段) --- */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 20px auto;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-}
-
-/* 2. 移除 figure 的預設間距，防止手機版破版 */
-figure {
-    margin: 30px 0; /* 左右設為 0 */
-    padding: 0;
-    text-align: center;
-}
-
-/* 3. figure 內的圖片間距微調 */
-figure img {
-    margin: 0 auto 10px auto !important;
-}
-
-figcaption {
-    font-size: 0.9em;
-    color: #666;
-    font-style: italic;
-    margin-top: 8px;
-    line-height: 1.5;
-}
-
-/* 取消特定圖片的懸停效果或陰影 (如有需要可使用) */
-.no-hover { cursor: default; }
-/* -------------------- */
-
-.nav-bar {
-    background: var(--white);
-    padding: 15px 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-.nav-bar a {
-    text-decoration: none;
-    color: var(--primary-color);
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    background: none;  /* 確保沒有底色 */
-    background-color: transparent;
-}
-
-.content-container {
-    max-width: 750px;
-    margin: 40px auto;
-    background: var(--white);
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+/* --- 3. 容器與文章區塊 --- */
+.container, .content-container { 
+    max-width: 770px; 
+    margin: 20px auto; 
+    background-color: #fff; 
+    padding: 40px; 
+    border-radius: 20px; 
+    box-shadow: var(--shadow); 
 }
 
 h1 { color: #222; margin: 0 0 10px 0; font-size: 2em; line-height: 1.3; }
@@ -98,146 +37,100 @@ h3[id] { scroll-margin-top: 100px; color: var(--primary-color); border-bottom: 2
 h4 { margin-top: 30px; color: #444; }
 
 .post-meta {
-color: #888;
-font-size: 0.9em;
-margin-bottom: 30px;
-border-bottom: 1px solid #eee;
-padding-bottom: 15px;
+    color: #888;
+    font-size: 0.9em;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
 }
 
-.hero-img { width: 100%; margin-bottom: 40px; }
+/* --- 4. 萬用表格系統 (低維運成本方案) --- */
+.trip-table-wrapper { 
+    overflow-x: auto; 
+    margin: 25px 0; 
+    -webkit-overflow-scrolling: touch; 
+    border-radius: 8px;
+}
 
-.trip-table-wrapper { overflow-x: auto; margin: 25px 0; }
 .trip-table {
-width: 100%;
-border-collapse: separate;
-border-spacing: 0;
-font-size: 0.95em;
-border: 1px solid #ddd;
-border-radius: 8px;
-overflow: hidden;
-word-break: keep-all;
+    width: 100%;
+    table-layout: auto; 
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 0.95em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    min-width: 100%;
 }
+
 .trip-table th, .trip-table td {
-border-right: 1px solid #ddd;
-border-bottom: 1px solid #ddd;
-padding: 14px 10px;
-text-align: center;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 14px 10px;
+    text-align: center;
+    vertical-align: middle;
+    /* 保護短資料不換行 */
+    white-space: nowrap;
 }
-.trip-table th:last-child, .trip-table td:last-child { border-right: none; }
+
+/* 智慧型緩衝：針對最後一欄 (備註欄) 允許換行並左對齊 */
+.trip-table th:last-child, .trip-table td:last-child { 
+    border-right: none; 
+    white-space: normal; 
+    text-align: left;
+    min-width: 200px;
+}
+
 .trip-table tr:last-child td { border-bottom: none; }
 .date-header th { background: var(--table-header-dark); color: #333; }
 .column-header th { background: var(--table-header-light); color: #555; }
 
-/* 避免裝備表被強制加粗，僅針對四欄式紀錄表 */
+/* 針對特定四欄表的時間列加寬 */
 .timeline-table td:nth-child(odd) { 
-background: var(--table-time-bg); 
-font-weight: 600; 
-width: 80px;
+    background: var(--table-time-bg); 
+    font-weight: 600; 
+    width: 90px;
 }
 
-.gear-box {
-background: #f1f8f1;
-padding: 25px;
-border-radius: var(--radius);
-margin: 30px 0;
-border-left: 5px solid var(--primary-color);
-}
-.toc-list { list-style: none; padding: 0; margin: 0; }
-.toc-list li { margin: 8px 0; }
-.toc-list a { text-decoration: none; color: var(--primary-color); font-weight: 500; }
+/* --- 5. 圖片與圖表樣式 --- */
+img { max-width: 100%; height: auto; display: block; margin: 20px auto; border-radius: var(--radius); box-shadow: var(--shadow); }
+figure { margin: 30px 0; padding: 0; text-align: center; }
+figure img { margin: 0 auto 10px auto !important; }
+figcaption { font-size: 0.9em; color: #666; font-style: italic; margin-top: 8px; }
 
-.timeline-list { list-style: none; padding: 0; }
-.timeline-list li { 
-margin-bottom: 50px; 
-border-bottom: 1px solid #f0f0f0; 
-padding-bottom: 30px; 
-}
-.timeline-list li:last-child { border-bottom: none; }
+/* --- 6. 導覽列與頁尾 --- */
+.nav-bar { background: var(--white); padding: 15px 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+.nav-bar a { text-decoration: none; color: var(--primary-color); font-weight: bold; display: flex; align-items: center; gap: 5px; }
 
-.suggestion-list { padding-left: 20px; }
-.suggestion-list li { margin-bottom: 10px; }
+footer { margin-top: auto; padding: 20px 0; text-align: center; color: #888; font-size: 0.9em; }
+.ig-link-wrapper { display: flex; align-items: center; gap: 10px; text-decoration: none; justify-content: center; transition: transform 0.2s ease; }
+.ig-link-wrapper:hover { transform: scale(1.05); }
+.ig-icon { width: 24px; height: 24px; object-fit: contain; box-shadow: none !important; }
+.ig-link { color: var(--primary-color); font-weight: bold; font-size: 1.1em; }
 
-/* 頁尾 */
-footer {
-margin-top: auto;
-padding: 20px 0; /* 縮小整個 footer 的上下內距 */
-text-align: center;
-color: #888;
-font-size: 0.9em;
-}
+/* --- 7. 留言板樣式 --- */
+input[type="text"], textarea { width: 100%; padding: 10px; margin: 10px 0 20px 0; border: 1px solid #ddd; border-radius: 5px; }
+input[type="submit"] { background-color: var(--primary-color); color: white; padding: 12px; border: none; border-radius: 5px; cursor: pointer; width: 100%; transition: opacity 0.2s; }
+input[type="submit"]:hover { opacity: 0.9; }
+.comment-item { background: #fafafa; border-left: 5px solid var(--primary-color); padding: 15px; margin-bottom: 15px; border-radius: 0 5px 5px 0; }
+.comment-name { font-weight: bold; color: #2c3e50; }
 
-footer p {
-margin-bottom: 5px; /* 縮短版權文字下方的距離 */
-}
-
-.ig-link-container {
-margin-top: 0px; /* 移除容器上方的推擠間距 */
-display: flex;
-justify-content: center;
-}
-
-.ig-link-wrapper {
-display: flex;
-align-items: center;
-gap: 10px;
-text-decoration: none;
-transition: transform 0.2s ease;
-}
-
-.ig-link-wrapper:hover {
-transform: scale(1.05);
-}
-
-.ig-icon {
-width: 24px;   /* 修正：從 10px 改回 24px */
-height: 24px;  /* 修正：從 10px 改回 24px */
-object-fit: contain;
-box-shadow: none !important; /* 確保不會吃到文章圖片的陰影 */
-}
-
-.ig-link {
-color: var(--primary-color); /* 修正：變數名稱要跟 :root 一致 */
-font-weight: bold;
-font-size: 1.1em;
-}
-
-/* 📱 手機版專屬優化 */
+/* --- 8. 📱 手機版專屬優化 (統一集中於此) --- */
 @media (max-width: 768px) {
-body { padding: 10px; } /* 手機端縮小間距 */
-.content-container, .container { padding: 20px; } /* 內距同步縮小 */
-}
-.sidebar {
-    width: 100% !important; height: auto; position: sticky; top: 0;
-    background: var(--primary-color);
-}
-.toggle-btn, .sidebar h2, .sidebar hr { display: none; }
-.sidebar-inner { padding: 10px; overflow-x: auto; }
-.sidebar-menu { display: flex; gap: 10px; }
-.sidebar-menu li { margin: 0; }
-.sidebar-menu a { padding: 8px 12px; background: rgba(255,255,255,0.1); border-radius: 15px; font-size: 0.85em; }
-.sidebar-menu a.active { background: white; color: var(--primary-green); }
-
-.main-content { margin-left: 0 !important; padding: 15px; }
-
-header { flex-direction: column; align-items: flex-start; padding: 20px; }
-.header-photos { width: 100%; grid-template-columns: repeat(4, 1fr); margin-top: 20px; }
-.header-photos img { height: 70px; }
-
-.article-list li { flex-direction: column; align-items: flex-start; gap: 5px; }
-/* --- 5. 全域細節優化 --- */
-*, *::before, *::after {
-    box-sizing: border-box; /* 確保 padding 不會撐破容器，這是現代開發必加的防線 */
-}
-
-input:focus, textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 2px rgba(45, 90, 39, 0.2); /* 點擊時有淡淡的綠色光暈 */
-    transition: all 0.3s ease;
-}
-
-/* 讓表格在手機上滾動更流暢 */
-.trip-table-wrapper {
-    -webkit-overflow-scrolling: touch;
+    body { padding: 10px; }
+    .container, .content-container { padding: 20px; }
+    
+    /* 強制多欄位表格在手機上可滾動且不擠壓 */
+    .trip-table { min-width: 600px; }
+    
+    .sidebar { width: 100% !important; position: sticky; top: 0; background: var(--primary-color); z-index: 1001; }
+    .sidebar-inner { padding: 10px; overflow-x: auto; }
+    .sidebar-menu { display: flex; gap: 10px; list-style: none; padding: 0; }
+    .sidebar-menu a { white-space: nowrap; padding: 8px 12px; background: rgba(255,255,255,0.1); border-radius: 15px; color: white; text-decoration: none; font-size: 0.85em; }
+    /* 修正顏色變數名稱 */
+    .sidebar-menu a.active { background: white; color: var(--primary-color); }
+    
+    .header-photos { grid-template-columns: repeat(4, 1fr); gap: 5px; }
+    .header-photos img { height: 60px; }
 }
