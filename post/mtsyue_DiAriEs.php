@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
 <body>
 
     <header class="nav-bar">
-        <a href="../index.html"><span>←</span> 返回 DiAriEs</a>
+        <a href="../index.php"><span>←</span> 返回 DiAriEs</a>
     </header>
 
     <article class="content-container">
