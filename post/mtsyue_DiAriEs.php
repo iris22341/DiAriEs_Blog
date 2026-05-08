@@ -131,7 +131,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                 <table class="trip-table">
                     <thead class="column-header">
                         <tr>
-                            <th style="width: 40%;">項目</th>
+                            <th style="width: 20%;">項目</th>
                             <th>是否需要 / 備註</th>
                         </tr>
                     </thead>
