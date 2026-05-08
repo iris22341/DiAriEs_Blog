@@ -75,18 +75,18 @@ h4 { margin-top: 30px; color: #444; }
 }
 
 /* 智慧型緩衝：針對最後一欄 (備註欄) 允許換行並左對齊 */
-.trip-table td:nth-child(2), .trip-table th:last-child, .trip-table td:last-child { 
-    border-right: none; 
+.trip-table td:nth-child(2), .trip-table th:last-child, .trip-table td:last-child {  
     white-space: normal; 
-    text-align: left;
-    min-width: 200px;
 }
 
-/* --- 讓欄2的界線不消失 --- */
 .trip-table th:last-child, 
 .trip-table td:last-child { 
     border-right: none; 
     min-width: 200px;
+}
+
+.trip-table td:nth-child(2) {
+    min-width: 150px;
 }
 
 .trip-table tr:last-child td { border-bottom: none; }
