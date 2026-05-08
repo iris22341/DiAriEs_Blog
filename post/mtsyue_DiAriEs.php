@@ -165,7 +165,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                         </tr>
                         <tr class="column-header">
                             <th style="width: 20%;">時間</th>
-                            <th">地點</th>
+                            <th>地點</th>
                             <th style="width: 20%;">時間</th>
                             <th>地點</th>
                         </tr>
