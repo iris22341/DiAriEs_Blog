@@ -256,7 +256,7 @@
         <div class="category-info">
             <h3>🏃 DiAriEs about 跑步</h3>
             <ul class="article-list">
-                <li><a href="https://iris22341.github.io/DiAriEs/articles/crufunorth_DiAriEs.html?utm_source=web&utm_medium=display&utm_campaign=crufunorth_DiAriEs" target="_blank" rel="noopener noreferrer">2026 CRUFU RUN 北台灣站</a><span class="article-date">2026/04/11-04/12</span></li>
+                <li><a href="/post/crufunorth_DiAriEs.php" target="_blank" rel="noopener noreferrer">2026 CRUFU RUN 北台灣站</a><span class="article-date">2026/04/11-04/12</span></li>
                 <li><p>To be continued......</p></li>
             </ul>
         </div>
