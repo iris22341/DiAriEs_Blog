@@ -107,47 +107,64 @@ padding-bottom: 15px;
 
 .hero-img { width: 100%; margin-bottom: 40px; }
 
-.trip-table-wrapper { overflow-x: auto; margin: 25px 0; }
-.trip-table {
-width: 100%;
-border-collapse: separate;
-border-spacing: 0;
-font-size: 0.95em;
-border: 1px solid #ddd;
-border-radius: 8px;
-overflow: hidden;
-word-break: keep-all;
+/* --- 1. 表格容器與基礎結構 --- */
+.trip-table-wrapper { 
+    overflow-x: auto; 
+    margin: 25px 0; 
+    -webkit-overflow-scrolling: touch; /* 讓手機滑動更順 */
 }
-.trip-table th, .trip-table td {
-border-right: 1px solid #ddd;
-border-bottom: 1px solid #ddd;
-padding: 14px 10px;
-text-align: center;
-}
-.trip-table th:last-child, .trip-table td:last-child { border-right: none; }
-.trip-table tr:last-child td { border-bottom: none; }
-.date-header th { background: var(--table-header-dark); color: #333; }
-.column-header th { background: var(--table-header-light); color: #555; }
 
-/* 避免裝備表被強制加粗，僅針對四欄式紀錄表 */
-.timeline-table td:nth-child(odd) { 
-background: var(--table-time-bg); 
-font-weight: 600; 
-width: 80px;
-}
 .trip-table {
     width: 100%;
-    /* 確保表格內容不會因為字數太少縮得太醜，也不會因為字多撐破 */
-    table-layout: auto; 
-    min-width: 500px; /* 強制在手機版有滾動條，而不是把欄位壓成一條線 */
+    table-layout: fixed; /* 關鍵：鎖定佈局，才能強制執行 3:7 比例 */
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 0.95em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    min-width: 500px; /* 確保在手機版不會縮得太扁 */
 }
 
-/* 針對備註欄位 (通常是第3欄) 進行文字微調 */
-.trip-table td:nth-child(3) {
-    text-align: left;
-    word-break: break-all; /* 防止長網址或連續符號撐破欄位 */
-    min-width: 150px;
+/* --- 2. 欄位寬度精確分配 (1:2:3 = 固定:3:7) --- */
+
+/* 第 1 欄：固定寬度 (預計時間) */
+.trip-table th:nth-child(1), 
+.trip-table td:nth-child(1) { 
+    width: 90px; 
+    background: var(--table-time-bg); 
+    font-weight: 600;
 }
+
+/* 第 2 欄：項目 (佔剩餘空間 30%) */
+.trip-table th:nth-child(2), 
+.trip-table td:nth-child(2) { 
+    width: 30%; 
+}
+
+/* 第 3 欄：備註 (佔剩餘空間 70%) */
+.trip-table th:nth-child(3), 
+.trip-table td:nth-child(3) { 
+    width: 70%; 
+    text-align: left; /* 備註文字較多，靠左對齊較美觀 */
+    word-break: break-all; /* 防止長網址撐破 */
+    white-space: normal; /* 確保文字會自動換行 */
+}
+
+/* --- 3. 儲存格細節與邊框控制 --- */
+.trip-table th, .trip-table td {
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 14px 10px;
+    vertical-align: middle; /* 內容垂直置中 */
+}
+
+.trip-table th:last-child, .trip-table td:last-child { border-right: none; }
+.trip-table tr:last-child td { border-bottom: none; }
+
+/* 標頭顏色設定 */
+.date-header th { background: var(--table-header-dark); color: #333; }
+.column-header th { background: var(--table-header-light); color: #555; }
 
 .gear-box {
 background: #f1f8f1;
