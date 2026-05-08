@@ -160,8 +160,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                 <table class="trip-table">
                     <thead>
                         <tr class="date-header">
-                            <th colspan="2">11/22 Day 0</th>
-                            <th colspan="2">11/23 Day 1</th>
+                            <th colspan="2" style="width: 50%;">11/22 Day 0</th>
+                            <th colspan="2" style="width: 50%;">11/23 Day 1</th>
                         </tr>
                         <tr class="column-header">
                             <th>時間</th>
