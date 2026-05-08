@@ -20,7 +20,6 @@
             transition: all 0.3s ease;
         }
 
-        /* 1. 左側選單 */
         .sidebar {
             width: var(--sidebar-width);
             height: 100vh;
@@ -35,7 +34,7 @@
         }
 
         .sidebar.collapsed { width: var(--sidebar-collapsed-width); }
-
+        
         .toggle-btn {
             background: none; border: none; color: white;
             font-size: 24px; cursor: pointer; padding: 20px;
@@ -56,7 +55,9 @@
         }
 
         .sidebar-menu { list-style: none; padding: 0; margin: 0; }
+        
         .sidebar-menu li { margin: 25px 0; }
+        
         .sidebar-menu a {
             color: rgba(255,255,255,0.8);
             text-decoration: none; font-weight: 500;
@@ -64,7 +65,6 @@
         }
         .sidebar-menu a:hover, .sidebar-menu a.active { color: white; padding-left: 10px; font-weight: bold; }
 
-        /* 2. 右側主要內容區 */
         .main-content {
             margin-left: var(--sidebar-width);
             flex-grow: 1;
@@ -78,7 +78,6 @@
 
         .main-content.expanded { margin-left: var(--sidebar-collapsed-width); }
 
-        /* 自介區塊 */
         header {
             margin-bottom: 40px;
             background: white;
@@ -91,16 +90,18 @@
         }
 
         .header-text { flex: 1; border-left: 5px solid var(--primary-green); padding-left: 20px; }
+        
         header h1 { color: var(--primary-green); margin: 0 0 15px 0; font-size: 1.8em; }
+        
         .header-bio { color: #555; line-height: 1.8; font-size: 1em; }
 
-        /* 自介照片牆 */
         .header-photos {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 10px;
             width: 300px;
         }
+        
         .header-photos img {
             width: 100%;
             height: 100px;
@@ -110,7 +111,6 @@
         }
         .header-photos img:hover { transform: scale(1.05); }
 
-        /* 文章區塊 (移除 Banner 後) */
         .category-section {
             display: block;
             background: white; border-radius: 20px;
@@ -122,10 +122,12 @@
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
         .category-info { padding: 30px; }
+        
         .category-info h3 { color: var(--primary-green); margin-top: 0; font-size: 1.3em; border-bottom: 2px solid var(--light-green); padding-bottom: 10px;}
 
         /* 文章列表與連結底線 */
         .article-list { list-style: none; padding: 0; margin-top: 15px; }
+        
         .article-list li {
             padding: 15px 0; border-bottom: 1px solid #f0f0f0;
             display: flex; justify-content: space-between; align-items: center;
@@ -136,11 +138,11 @@
             color: #333; font-size: 1.1em; font-weight: 500;
             transition: 0.3s;
         }
+        
         .article-list a:hover { color: var(--primary-green); background-color: rgba(45, 90, 39, 0.05); }
-
+        
         .article-date { color: #aaa; font-size: 0.9em; }
 
-        /* 頁尾 IG 樣式優化 */
         footer {
             margin-top: auto;
             padding: 40px 0 20px 0;
@@ -148,11 +150,13 @@
             color: #888;
             font-size: 0.9em;
         }
+        
         .ig-link-container {
             margin-top: 15px;
             display: flex;
             justify-content: center;
         }
+        
         .ig-link-wrapper {
             display: flex;
             align-items: center;
@@ -160,14 +164,17 @@
             text-decoration: none;
             transition: transform 0.2s ease;
         }
+        
         .ig-link-wrapper:hover {
             transform: scale(1.05);
         }
+        
         .ig-icon {
             width: 10px;
             height: 10px;
             object-fit: contain;
         }
+        
         .ig-link {
             color: var(--primary-green);
             font-weight: bold;
@@ -181,24 +188,34 @@
                 width: 100% !important; height: auto; position: sticky; top: 0;
                 background: var(--primary-green);
             }
+            
             .toggle-btn, .sidebar h2, .sidebar hr { display: none; }
+            
             .sidebar-inner { padding: 10px; overflow-x: auto; }
+            
             .sidebar-menu { display: flex; gap: 10px; }
+            
             .sidebar-menu li { margin: 0; }
+            
             .sidebar-menu a { padding: 8px 12px; background: rgba(255,255,255,0.1); border-radius: 15px; font-size: 0.85em; }
+            
             .sidebar-menu a.active { background: white; color: var(--primary-green); }
 
             .main-content { margin-left: 0 !important; padding: 15px; }
             
             header { flex-direction: column; align-items: flex-start; padding: 20px; }
+            
             .header-photos { width: 100%; grid-template-columns: repeat(4, 1fr); margin-top: 20px; }
+            
             .header-photos img { height: 70px; }
 
             .article-list li { flex-direction: column; align-items: flex-start; gap: 5px; }
         }
+        
     </style>
 </head>
 <body>
+
 
 <nav class="sidebar" id="mySidebar">
     <button class="toggle-btn" onclick="toggleNav()">☰</button>
