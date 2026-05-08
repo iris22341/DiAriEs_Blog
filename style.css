@@ -9,12 +9,6 @@
     --shadow: 0 4px 15px rgba(0,0,0,0.1);
     --radius: 12px;
 }
-/* --- 讓欄2的界線不消失 --- */
-.trip-table th:last-child, 
-.trip-table td:last-child { 
-    border-right: none; 
-    min-width: 200px;
-}
 
 /* --- 2. 全域基礎樣式 --- */
 *, *::before, *::after { box-sizing: border-box; }
@@ -85,6 +79,13 @@ h4 { margin-top: 30px; color: #444; }
     border-right: none; 
     white-space: normal; 
     text-align: left;
+    min-width: 200px;
+}
+
+/* --- 讓欄2的界線不消失 --- */
+.trip-table th:last-child, 
+.trip-table td:last-child { 
+    border-right: none; 
     min-width: 200px;
 }
 
