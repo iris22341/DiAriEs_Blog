@@ -1,30 +1,32 @@
 <?php
-// 1. 取得 Railway 連線字串 (這必須是檔案的第一行，前面不能有任何東西)
+// 1. 取得 Railway 連線字串
 $db_url = getenv("DATABASE_URL");
 if ($db_url) {
     $url = parse_url($db_url);
     $conn = mysqli_connect($url["host"], $url["user"], $url["pass"], substr($url["path"], 1), $url["port"]);
-	mysqli_query($conn, "SET time_zone = '+08:00'");
+    mysqli_query($conn, "SET time_zone = '+08:00'");
     mysqli_set_charset($conn, "utf8mb4");
 }
 
-// 2. 緊接著處理表單送出 (不要關閉 PHP 標籤，直接寫下來)
+// 2. 處理表單送出
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
+    // 【修正點 1】定義當前台灣時間，否則 SQL 會抓不到資料
+    date_default_timezone_set('Asia/Taipei');
+    $current_time = date("Y-m-d H:i:s");
+
     $name = mysqli_real_escape_string($conn, $_POST['name']);
     $content = mysqli_real_escape_string($conn, $_POST['content']);
 
-    // 確認資料表名稱為 guestbook
-    $sql_insert = "INSERT INTO `guestbook_crufunorth` (name, content) VALUES ('$name', '$content')";
+    // 寫入總表 guestbook，並標記為 crufunorth
+    $sql_insert = "INSERT INTO `guestbook` (post_id, name, content, created_at) VALUES ('crufunorth', '$name', '$content', '$current_time')";
 
     if (mysqli_query($conn, $sql_insert)) {
-        // 因為還沒有任何 HTML 輸出，這次跳轉會成功！
         header("Location: " . $_SERVER['PHP_SELF']);
         exit;
     } else {
         echo "寫入失敗：" . mysqli_error($conn);
     }
 }
-// 這裡可以選擇性關閉標籤，或者直接開始寫下方的 HTML
 ?>
 
 
@@ -642,43 +644,44 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
 
 
 <div class="container">
-        <h2>留言板</h2>
-        <form method="POST" action="">
-            <label>暱稱：</label>
-            <input type="text" name="name" required>
-            <label>留言內容：</label>
-            <textarea name="content" rows="4" required></textarea>
-            <input type="submit" name="submit_button" value="送出留言">
-        </form>
+    <h2>留言板</h2>
+    <form method="POST" action="">
+        <label>暱稱：</label>
+        <input type="text" name="name" required>
+        <label>留言內容：</label>
+        <textarea name="content" rows="4" required></textarea>
+        <input type="submit" name="submit_button" value="送出留言">
+    </form>
 
-        <div class="comment-list">
-            <h3>看看大家怎麼說</h3>
-            <?php
-            // --- 步驟 2：讀取留言 ---
-            $sql_select = "SELECT * FROM guestbook_crufunorth ORDER BY id DESC"; 
-            $result = mysqli_query($conn, $sql_select);
+    <div class="comment-list">
+        <h3>看看大家怎麼說</h3>
+        <?php
+        // 3. 讀取留言：只抓出這篇文章的內容
+        $sql_select = "SELECT * FROM guestbook WHERE post_id = 'crufunorth' ORDER BY id DESC"; 
+        $result = mysqli_query($conn, $sql_select);
 
-            if ($result && mysqli_num_rows($result) > 0) {
-                while($row = mysqli_fetch_assoc($result)) {
-                    echo "<div class='comment-item'>";
-                    echo "  <div class='comment-info'>";
-                    echo "    <span class='comment-name'>" . htmlspecialchars($row['name']) . "</span> ";
-                    // 這裡根據你資料庫的實際時間欄位名稱調整，若不確定可先用 $row['id'] 測試
-                    $time_display = isset($row['time_at']) ? $row['time_at'] : (isset($row['time_at']) ? $row['time_at'] : "時間不詳");
-                    echo "    於 " . $time_display . " 留言：";
-                    echo "  </div>";
-                    echo "  <div class='comment-text'>" . nl2br(htmlspecialchars($row['content'])) . "</div>";
-                    echo "</div>";
-                }
-            } else {
-                echo "<p>目前還沒有留言，快來當第一個吧！</p>";
-                if (!$result) echo "錯誤原因：" . mysqli_error($conn);
+        if ($result && mysqli_num_rows($result) > 0) {
+            while($row = mysqli_fetch_assoc($result)) {
+                echo "<div class='comment-item'>";
+                echo "<div class='comment-info'>";
+                echo "<span class='comment-name'>" . htmlspecialchars($row['name']) . "</span> ";
+                
+                // 【修正點 2】確保名稱與 Railway 欄位名稱 created_at 一致
+                $time_display = !empty($row['created_at']) ? $row['created_at'] : "時間不詳";
+                
+                echo "於 " . $time_display . " 留言：";
+                echo "</div>";
+                echo "<div class='comment-text'>" . nl2br(htmlspecialchars($row['content'])) . "</div>";
+                echo "</div>";
             }
-            mysqli_close($conn);
-            ?>
-        </div>
+        } else {
+            echo "<p>目前還沒有留言，快來當第一個吧！</p>";
+            if (!$result) echo "錯誤原因：" . mysqli_error($conn);
+        }
+        mysqli_close($conn);
+        ?>
     </div>
-
+</div>
 
     <footer>
             <p>© 2026 DiAriEs' Blog | Capturing every moment of dopamine.</p>
