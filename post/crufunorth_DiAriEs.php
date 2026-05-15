@@ -240,7 +240,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                             <tr><td>17</td><td>6.7 k</td><td>+97/-90</td><td>小萬</td><td></td><td></td></tr>
                             <tr><td>18</td><td>7.3 k</td><td>+98/-107</td><td>Sam</td><td></td><td></td></tr>
                             <tr><td>19</td><td>6.6 k</td><td>+208/-39</td><td>Spencer</td><td></td><td></td></tr>
-                            <tr><td>20</td><td>7.1 k</td><td>+106/-286</td><td>Amber</td><td>20:29</td><td>新北金山</td></tr>
+                            <tr><td>20</td><td>7.1 k</td><td>+106/-286</td><td>Amber</td><td>21:40-22:30</td><td>新北金山</td></tr>
                         </tbody>
                     </table>
                 </div>
