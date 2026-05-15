@@ -186,7 +186,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                         </span>
                     </span>
                     <span>👣 <strong>總距離：</strong>210 k</span><br>
-                    <span>⌚ <strong>總時間：</strong>32:32:32</span>
+                    <span>⌚ <strong>總時間：</strong>39:36:42</span>
                 </p>
 
             <div class="actual-trip-details">
