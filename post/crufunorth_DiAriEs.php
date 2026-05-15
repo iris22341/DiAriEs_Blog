@@ -524,7 +524,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                     <p><strong>（根據群組訊息跟照片時間，簡單紀錄 CAR2 朋朋們的狀況）</strong>
                         <br>14:44 來到第十三棒難中之王，這次由小萬扛下，真男人真的帥！邊跑邊玩但速度不掉的 CAR2，一整個很享受。
                         <br>17:05 第十五棒 Amber 抵達基隆八斗子。CAR1 大概在第十七棒時全員睡醒，決定提早去幫 CAR2 加油。抵達時剛好是第十九棒 Spncer 交接給 Amber，
-                        <br>在朱銘美術館迎來第三次兩車會合，在這邊拍照毛毛的，就不放合照嚇大家（其實是合照消失，更毛...）。因為二十棒路段很暗，兩車沿途幫 Amber 加油。
+                        在朱銘美術館迎來第三次兩車會合，在這邊拍照毛毛的，就不放合照嚇大家（其實是合照消失，更毛...）。因為二十棒路段很暗，兩車沿途幫 Amber 加油。
                     </p>
                     <figure>
                     <img src="https://lh3.googleusercontent.com/pw/AP1GczNdj0OC0F5VJVTRoUbwyfeQeUCD1TTJmxZldRIQvJOrDBKx8Iw6eIEZksEy-PN9gaNDuNdtoHqf78kpxnL52ghXSp2YI0BU-FjY2SdZym8pQh_yiUtj=w1200-h1000-p-k" alt="難中之王">
@@ -582,7 +582,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                 <li>
                     <p><strong>01:45 第二十三棒出花</strong>。
                         <br>第一次補給後 Hugo 便跟著陳律跑，我們是到接力區才得知陳律下坡滑倒，好險只有擦傷，人沒大礙，
-                        <br>但鞋子挺有事的，底整個磨平，真的該換一雙新鞋，但也恭喜陳律夸父初體驗成功，是第三個正式下班的人。
+                        但鞋子挺有事的，底整個磨平，真的該換一雙新鞋，但也恭喜陳律夸父初體驗成功，是第三個正式下班的人。
                     </p>
                     <figure>
                     <img src="https://lh3.googleusercontent.com/pw/AP1GczMwohmYA7h3CYFwt3L1tDjwHTA4-8AT4TjD5pUS8TsL9b9qEETehcJbBLZho5iwZ0ZZhanB5r4JZw5qoqVTW1IFXc60dZPItYbbqcM5wRro4qfWIH2V=w1200-h1000-p-k" alt="第二十三接力區">
