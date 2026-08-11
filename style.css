@@ -184,21 +184,146 @@ font-size: 1.1em;
 }
 
 
-/* --- 9. 📱 手機版專屬優化 (統一集中於此) --- */
+/* --- 9. 📱 手機版專屬優化 --- */
 @media (max-width: 768px) {
-    body { padding: 10px; }
-    .container, .content-container { padding: 20px; }
-    
-    /* 強制多欄位表格在手機上可滾動且不擠壓 */
-    .trip-table { min-width: 600px; }
-    
-    .sidebar { width: 100% !important; position: sticky; top: 0; background: var(--primary-color); z-index: 1001; }
-    .sidebar-inner { padding: 10px; overflow-x: auto; }
-    .sidebar-menu { display: flex; gap: 10px; list-style: none; padding: 0; }
-    .sidebar-menu a { white-space: nowrap; padding: 8px 12px; background: rgba(255,255,255,0.1); border-radius: 15px; color: white; text-decoration: none; font-size: 0.85em; }
-    /* 修正顏色變數名稱 */
-    .sidebar-menu a.active { background: white; color: var(--primary-color); }
-    
-    .header-photos { grid-template-columns: repeat(4, 1fr); gap: 5px; }
-    .header-photos img { height: 60px; }
+
+    html {
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+    }
+
+    body {
+        padding: 10px;
+        font-size: 16px;
+        line-height: 1.8;
+        overflow-x: hidden;
+    }
+
+    .container,
+    .content-container {
+        width: 100%;
+        max-width: 100%;
+        margin: 10px auto;
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    /* 標題 */
+    h1 {
+        font-size: 1.7em;
+        line-height: 1.4;
+    }
+
+    h3 {
+        font-size: 1.3em;
+        line-height: 1.5;
+    }
+
+    h4 {
+        font-size: 1.1em;
+        line-height: 1.5;
+    }
+
+    p,
+    li {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    /* 圖片 */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* 表格外層 */
+    .trip-table-wrapper {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 20px 0;
+    }
+
+    /* 一般表格 */
+    .trip-table {
+        width: 100%;
+        min-width: 100%;
+        font-size: 16px;
+        table-layout: auto;
+    }
+
+    .trip-table th,
+    .trip-table td {
+        padding: 10px 8px;
+        white-space: normal;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        line-height: 1.6;
+    }
+
+    /* 避免最後一欄被強制撐到 200px */
+    .trip-table th:last-child,
+    .trip-table td:last-child {
+        min-width: 0;
+    }
+
+    /* 第二欄也不要固定 150px */
+    .trip-table td:nth-child(2) {
+        min-width: 0;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        width: 100% !important;
+        position: sticky;
+        top: 0;
+        background: var(--primary-color);
+        z-index: 1001;
+    }
+
+    .sidebar-inner {
+        padding: 10px;
+        overflow-x: auto;
+    }
+
+    .sidebar-menu {
+        display: flex;
+        gap: 10px;
+        list-style: none;
+        padding: 0;
+    }
+
+    .sidebar-menu a {
+        white-space: nowrap;
+        padding: 8px 12px;
+        background: rgba(255,255,255,0.1);
+        border-radius: 15px;
+        color: white;
+        text-decoration: none;
+        font-size: 0.85em;
+    }
+
+    .sidebar-menu a.active {
+        background: white;
+        color: var(--primary-color);
+    }
+
+    /* Header Photos */
+    .header-photos {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+    }
+
+    .header-photos img {
+        height: 60px;
+    }
+
+    /* 影片 */
+    iframe {
+        width: 100% !important;
+        max-width: 100%;
+        aspect-ratio: 16 / 9;
+        height: auto !important;
+    }
 }
