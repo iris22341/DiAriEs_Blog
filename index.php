@@ -239,7 +239,7 @@
                 喜歡跑河濱 > 跑操場 >>> 跑步機 <br/>
                 佛系完百，享受山頭不同時期的美<br/>
                 山、海都愛，目前還是山系女子<br/>
-                目標每年安排一次出國 (●'◡'●)
+                開始挑戰海外賽事，希望能蒐集八大馬 (●'◡'●)
             </div>
         </div>
         <div class="header-photos">
@@ -283,6 +283,7 @@
         <div class="category-info">
             <h3>✈️ DiAriEs about 旅行</h3>
             <ul class="article-list">
+                <li><a href="/post/yellowknief_DiAriEs.php" target="_blank" rel="noopener noreferrer">加拿大黃刀追光之旅</a><span class="article-date">2025/02/22-03/03</span></li>
                 <li><p>To be continued......</p></li>
         </div>
     </section>
