@@ -244,7 +244,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                             機票 - 台灣到溫哥華 & 溫哥華到耶洛奈夫（來回）
                             </td>
                             <td style="padding: 15px; line-height: 2; vertical-align: middle;">
-                            2024/8/27
+                            T-7個月
                             </td>
                             <td style="padding: 15px; line-height: 2; vertical-align: middle; word-break: break-word; text-align: left;">
                            <br>需分兩段買，一段是台灣到溫哥華（國際線）、另一段是溫哥華到耶洛奈夫（國內線）。
@@ -256,7 +256,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                             黃刀鎮住宿 - Nova Inn（五天四夜）
                             </td>
                             <td style="padding: 15px; line-height: 2; vertical-align: middle;">
-                            2024/8/31
+                            T-7個月
                             </td>
                             <td style="padding: 15px; line-height: 2; vertical-align: middle; word-break: break-word; text-align: left;">
                             我們認為比起溫哥華住宿，得優先找黃刀鎮落腳處。
@@ -269,7 +269,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                             極光行程 - Morning Star
                             </td>
                             <td style="padding: 15px; line-height: 2; vertical-align: middle;">
-                            2024/9/1 ~ 2024/11/7
+                            T-6個月
                             </td>
                             <td style="padding: 15px; line-height: 2; vertical-align: middle; word-break: break-word; text-align: left;">
                             先確定要參加五天四夜追極光行程，中間跟導遊討論加購項目跟禦寒衣物租借（原先跟 <a href ="https://www.instagram.com/cat56511?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Tinny</a> 聯繫，不過我們去黃刀時她已離職，到當地是由 Evon 帶團），導遊超可愛還跟我們說雪地健行 Cp 值低不推 XD
@@ -285,7 +285,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                             <br>訂機場接駁
                             </td>
                             <td style="padding: 15px; line-height: 2; vertical-align: middle;">
-                            ~ 2024/12/31
+                            T-3個月
                             </td>
                             <td style="padding: 15px; line-height: 2; vertical-align: middle; word-break: break-word; text-align: left;">
                                 確認香港轉機這段不需申請港簽，因此只辦加拿大線上簽（eTA），申請教學可參考<a href="https://www.hellostudy.com.tw/why-hello-study/resources/documents/4883/canada-eta-full-tutorial/" target="_blank">網頁</a>。
@@ -297,7 +297,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                             <td style="padding: 15px; line-height: 2; vertical-align: middle; font-weight: normal;">整理行李
                             </td>
                             <td style="padding: 15px; line-height: 2; vertical-align: middle;">
-                            ~ 2025/02/21
+                           T-1個月
                             </td>
                             <td style="padding: 15px; line-height: 2; vertical-align: middle; word-break: break-word; text-align: left;">
                                 發熱衣/發熱褲各 2 件、毛衣/保暖外衣 3 件、牛仔褲/外褲 3 件、內衣褲 3 套、毛帽 1 頂、圍巾 1 條、
@@ -578,39 +578,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                             <table class="trip-table table-fit">
                                 <thead>
                                         <tr class="date-header" style="background-color: #2c3e50; color: white;">
-                                            <th style="width: 4%; border: 1px solid #ddd; padding: 10px;">NO.</th> 
+                                            <th style="width: 4%; border: 1px solid #ddd; padding: 10px;"> </th> 
                                             <th style="width: 32%; border: 1px solid #ddd; padding: 10px;">地點</th>
                                             <th style="width: 65%; border: 1px solid #ddd; padding: 10px;">memo</th>
                                         </tr>
                                     </thead>
                                 <tbody>
                                     <tr>
-                                        <td style="border: 1px solid #ddd; padding: 10px; font-weight: bold; background-color: #f9f9f9;">01.</td>
+                                        <td style="border: 1px solid #ddd; padding: 10px; font-weight: bold; background-color: #f9f9f9;">1</td>
                                         <td style="border: 1px solid #ddd; padding: 10px;"><a href="https://maps.app.goo.gl/ghwZ8d5JrQDG2tRJ8" target="_blank">Prince of Wales Northern Heritage Centre</a></td>
                                         <td style="border: 1px solid #ddd; padding: 10px; text-align: left;">營業時間：10:00 - 17:00（以官方資訊為主）
                                             <br>星期日休息，館內介紹黃刀鎮的歷史演變、生態環境及野生動物。</td>
                                     </tr>
                                     <tr>
-                                        <td style="border: 1px solid #ddd; padding: 10px; font-weight: bold; background-color: #f9f9f9;">02.</td>
+                                        <td style="border: 1px solid #ddd; padding: 10px; font-weight: bold; background-color: #f9f9f9;">2</td>
                                         <td style="border: 1px solid #ddd; padding: 10px;"><a href="https://maps.app.goo.gl/VnRcA8tYBb3BvSPG6" target="_blank">Legislative Assembly of the Northwest Territories</a></td>
                                         <td style="border: 1px solid #ddd; padding: 10px; text-align: left;">營業時間：07:00 - 18:00（以官方資訊為主）
                                             <br>議事廳內鋪設的北極熊皮極具當地特色，環形的設計理念源自原住民採共識決的傳統。</td>
                                     </tr>
                                     <tr>
-                                        <td style="border: 1px solid #ddd; padding: 10px; font-weight: bold; background-color: #f9f9f9;">03.</td>
+                                        <td style="border: 1px solid #ddd; padding: 10px; font-weight: bold; background-color: #f9f9f9;">3</td>
                                         <td style="border: 1px solid #ddd; padding: 10px;"><a href="https://maps.app.goo.gl/eYSbaaHaynChi3gc6" target="_blank">Canada Post</a></td>
                                         <td style="border: 1px solid #ddd; padding: 10px; text-align: left;">營業時間：09:00 - 17:30（以官方資訊為主）
                                             <br>出國旅遊一定要寄張明信片的吧！目前只剩這家郵局有營業，貼完郵票拿給櫃檯人員蓋<span style="color: red;">北極熊郵戳</span>就大功告成，當然也可以自行投入外面郵筒寄出。</td>
                                     </tr>
                                     <tr>
-                                        <td style="border: 1px solid #ddd; padding: 10px; font-weight: bold; background-color: #f9f9f9;">04.</td>
+                                        <td style="border: 1px solid #ddd; padding: 10px; font-weight: bold; background-color: #f9f9f9;">4</td>
                                         <td style="border: 1px solid #ddd; padding: 10px;"><a href="https://maps.app.goo.gl/iy5x2XGh61kHsZ7n9" target="_blank">Yellowknife Visitor Centre</a></td>
                                         <td style="border: 1px solid #ddd; padding: 10px; text-align: left;">營業時間：10:00 - 18:00（以官方資訊為主）
                                             <br>如果有買旅行社的極光基本套裝行程，就會送一日黃刀鎮導覽，其中包含此點，如果不想走太多路，也可等一日導覽再前往參觀。
                                             只要踏入這，<span style="color: red;">不管有沒有看到極光，都可以領紀念品</span>。此外，牆面也有介紹當地的原住民文化及極光小知識。</td>
                                     </tr>
                                     <tr>
-                                        <td style="border: 1px solid #ddd; padding: 10px; font-weight: bold; background-color: #f9f9f9;">05.</td>
+                                        <td style="border: 1px solid #ddd; padding: 10px; font-weight: bold; background-color: #f9f9f9;">5</td>
                                         <td style="border: 1px solid #ddd; padding: 10px;"><a href="https://maps.app.goo.gl/wnVU8QzwafC8FmBh7" target="_blank">NWT Diamond and Jewellery Centre</a></td>
                                         <td style="border: 1px solid #ddd; padding: 10px; text-align: left;">營業時間：10:00 - 17:30（以官方資訊為主）
                                             <br>黃刀鎮除了是追光勝地外，也是世界鑽石重要產地，主要從周遭的億萬年岩層（金伯利岩）開採，館內有個小院廳，員工會給一個 VR 眼鏡，播放鑽石開採、切割及打磨過程，讓遊客身歷其境，
@@ -641,20 +641,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                             <table class="trip-table table-fit">
                                 <thead>
                                         <tr class="date-header" style="background-color: #2c3e50; color: white;">
-                                            <th style="width: 4%; border: 1px solid #ddd; padding: 10px;">NO.</th> 
+                                            <th style="width: 4%; border: 1px solid #ddd; padding: 10px;"> </th> 
                                             <th style="width: 32%; border: 1px solid #ddd; padding: 10px;">地點</th>
                                             <th style="width: 65%; border: 1px solid #ddd; padding: 10px;">memo</th>
                                         </tr>
                                     </thead>
                                 <tbody>
                                     <tr>
-                                        <td style="border: 1px solid #ddd; padding: 10px; font-weight: bold; background-color: #f9f9f9;">01.</td>
+                                        <td style="border: 1px solid #ddd; padding: 10px; font-weight: bold; background-color: #f9f9f9;">1</td>
                                         <td style="border: 1px solid #ddd; padding: 10px;"><a href="https://maps.app.goo.gl/LM7Uv7MVbBbAkgQL6" target="_blank">Houcine's Your Independent Grocer Yellowknife 50th Ave</a></td>
                                         <td style="border: 1px solid #ddd; padding: 10px; text-align: left;">營業時間：08:00 - 21:00（以官方資訊為主）
                                             <br>黃刀唯二的大型超市，有生鮮蔬果、肉品、冷凍食品、餅乾、泡麵、飲料、民生用品等等，距離結帳櫃台最遠那區也有販售熟食，我們沒事就會來逛逛補貨，如果住的地方有廚房，可以買蔬菜、肉品回去自己煮，吃得好有生活感也更省！</td>
                                     </tr>
                                     <tr>
-                                        <td style="border: 1px solid #ddd; padding: 10px; font-weight: bold; background-color: #f9f9f9;">02.</td>
+                                        <td style="border: 1px solid #ddd; padding: 10px; font-weight: bold; background-color: #f9f9f9;">2</td>
                                         <td style="border: 1px solid #ddd; padding: 10px;"><a href="https://maps.app.goo.gl/MTS7DwY2fivmX9VD6" target="_blank">Shoppers Drug Mart</a></td>
                                         <td style="border: 1px solid #ddd; padding: 10px; text-align: left;">營業時間：08:00 - 21:00（以官方資訊為主）
                                             <br>另一間大型超市，民生食物可以去 Independent 採買，如果要買保養/化妝品、藥品這間超市較齊全。</td>
@@ -674,43 +674,43 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                             <table class="trip-table table-fit">
                                 <thead>
                                         <tr class="date-header" style="background-color: #2c3e50; color: white;">
-                                            <th style="width: 4%; border: 1px solid #ddd; padding: 10px;">NO.</th> 
+                                            <th style="width: 4%; border: 1px solid #ddd; padding: 10px;"> </th> 
                                             <th style="width: 32%; border: 1px solid #ddd; padding: 10px;">地點</th>
                                             <th style="width: 65%; border: 1px solid #ddd; padding: 10px;">memo</th>
                                         </tr>
                                     </thead>
                                 <tbody>
                                     <tr>
-                                        <td style="border: 1px solid #ddd; padding: 10px; font-weight: bold; background-color: #f9f9f9;">01.</td>
+                                        <td style="border: 1px solid #ddd; padding: 10px; font-weight: bold; background-color: #f9f9f9;">1</td>
                                         <td style="border: 1px solid #ddd; padding: 10px;"><a href="https://maps.app.goo.gl/t5SQhh8GKKQW1tq18" target="_blank">YK Centre Mall</a></td>
                                         <td style="border: 1px solid #ddd; padding: 10px; text-align: left;">營業時間：08:00 - 18:00（以官方資訊為主）
                                             <br>位於商辦大樓 1F，裡面有各種小店，明信片就是在其中一家購入，建議多比價才不會買貴。有一個入口可通往 Independent 超市，看 Google Map 超市位在 2F，我們又找不到樓梯，便搭電梯，結果來到人家公司門口，後來回到 1F，有熱心的民眾詢問我們是否需要幫忙，我們很不好意思的感謝他，後來逛了幾次後就找到通往超市的入口 XD</td>
                                     </tr>
                                     <tr>
-                                        <td style="border: 1px solid #ddd; padding: 10px; font-weight: bold; background-color: #f9f9f9;">02.</td>
+                                        <td style="border: 1px solid #ddd; padding: 10px; font-weight: bold; background-color: #f9f9f9;">2</td>
                                         <td style="border: 1px solid #ddd; padding: 10px;"><a href="https://maps.app.goo.gl/3dsBRtVakFrXN7FS8" target="_blank">Centre Square Mall</a></td>
                                         <td style="border: 1px solid #ddd; padding: 10px; text-align: left;">營業時間：09:30 - 18:00（以官方資訊為主）
                                             <br>跟 YK Centre Mall 配置很像，裡面也有多間店家，不過印象中我在這只買了 Tim Hortons ，彌補在溫哥華機場沒買的遺憾 XD</td>
                                     </tr>
                                     <tr>
-                                        <td style="border: 1px solid #ddd; padding: 10px; font-weight: bold; background-color: #f9f9f9;">03.</td>
+                                        <td style="border: 1px solid #ddd; padding: 10px; font-weight: bold; background-color: #f9f9f9;">3</td>
                                         <td style="border: 1px solid #ddd; padding: 10px;"><a href="https://maps.app.goo.gl/2HhxSbCzkXXUgAbq8" target="_blank">Northern Souvenirs & Gifts</a></td>
                                         <td style="border: 1px solid #ddd; padding: 10px; text-align: left;">營業時間：10:00 - 18:00（以官方資訊為主）
                                             <br>紀念用品店賣的東西大同小異，以楓糖餅乾/棒棒糖、糖漿為最經典的伴手禮，推薦可購買北極熊車牌跟黃刀造型的磁鐵/徽章別針給朋友，實用又有特色。</td>
                                     </tr>
                                     <tr>
-                                        <td style="border: 1px solid #ddd; padding: 10px; font-weight: bold; background-color: #f9f9f9;">04.</td>
+                                        <td style="border: 1px solid #ddd; padding: 10px; font-weight: bold; background-color: #f9f9f9;">4</td>
                                         <td style="border: 1px solid #ddd; padding: 10px;"><a href="https://maps.app.goo.gl/rub58Z7YFKJW2pd38" target="_blank">Loony Gallery</a></td>
                                         <td style="border: 1px solid #ddd; padding: 10px; text-align: left;">營業時間：10:00 - 18:00（以官方資訊為主）</td>
                                     </tr>
                                     <tr>
-                                        <td style="border: 1px solid #ddd; padding: 10px; font-weight: bold; background-color: #f9f9f9;">05.</td>
+                                        <td style="border: 1px solid #ddd; padding: 10px; font-weight: bold; background-color: #f9f9f9;">5</td>
                                         <td style="border: 1px solid #ddd; padding: 10px;"><a href="https://maps.app.goo.gl/E4W5jVSVVefZd5oKA" target="_blank">The Salvation Army Yellowknife Thrift Store</a></td>
                                         <td style="border: 1px solid #ddd; padding: 10px; text-align: left;">營業時間：10:00 - 18:00（以官方資訊為主）
                                             <br>位在飯店對面，以二手商品為主。</td>
                                     </tr>
                                     <tr>
-                                        <td style="border: 1px solid #ddd; padding: 10px; font-weight: bold; background-color: #f9f9f9;">06.</td>
+                                        <td style="border: 1px solid #ddd; padding: 10px; font-weight: bold; background-color: #f9f9f9;">6</td>
                                         <td style="border: 1px solid #ddd; padding: 10px;"><a href="https://maps.app.goo.gl/QgtePv3svkrXEnzTA" target="_blank">Weaver & Devore Trading Ltd</a></td>
                                         <td style="border: 1px solid #ddd; padding: 10px; text-align: left;">營業時間：9:00 - 18:00（以官方資訊為主）
                                             <br>位在 Bullock's Bistro 網美魚餐廳對面，可以趁候位時先去逛，店家 2F 有販售各種禦寒用品，像是雪鞋、手套、兩側可罩住耳朵的帽子、大衣等。</td>
@@ -729,20 +729,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                             <table class="trip-table table-fit">
                                 <thead>
                                         <tr class="date-header" style="background-color: #2c3e50; color: white;">
-                                            <th style="width: 4%; border: 1px solid #ddd; padding: 10px;">NO.</th> 
+                                            <th style="width: 4%; border: 1px solid #ddd; padding: 10px;"> </th> 
                                             <th style="width: 32%; border: 1px solid #ddd; padding: 10px;">地點</th>
                                             <th style="width: 65%; border: 1px solid #ddd; padding: 10px;">memo</th>
                                         </tr>
                                     </thead>
                                 <tbody>
                                     <tr>
-                                        <td style="border: 1px solid #ddd; padding: 10px; font-weight: bold; background-color: #f9f9f9;">01.</td>
+                                        <td style="border: 1px solid #ddd; padding: 10px; font-weight: bold; background-color: #f9f9f9;">1</td>
                                         <td style="border: 1px solid #ddd; padding: 10px;"><a href="https://maps.app.goo.gl/QQgk3EKDKkGHi9i8A" target="_blank">The Vietnamese Noodle House</a></td>
                                         <td style="border: 1px solid #ddd; padding: 10px; text-align: left;">營業時間：11:00 - 20:00（以官方資訊為主）
                                             <br>販賣越式料理，這是我們唯二有吃的餐廳，不過會吃這間是因為旅行社冰上捕魚有配合料理當日捕撈到的新鮮魚貨。</td>
                                     </tr>
                                     <tr>
-                                        <td style="border: 1px solid #ddd; padding: 10px; font-weight: bold; background-color: #f9f9f9;">02.</td>
+                                        <td style="border: 1px solid #ddd; padding: 10px; font-weight: bold; background-color: #f9f9f9;">2</td>
                                         <td style="border: 1px solid #ddd; padding: 10px;"><a href="https://maps.app.goo.gl/dmkPejS5A7eaLPBz9" target="_blank">Bullock's Bistro</a></td>
                                         <td style="border: 1px solid #ddd; padding: 10px; text-align: left;">營業時間：11:30 - 20:00（以官方資訊為主）
                                             <br>第二間有吃的餐廳，網路推薦必吃，用餐時段去真的都要排隊，我們有先打電話去問，店家建議我們直接到現場等，大約 16:30 過去，等了 30 分鐘，
@@ -750,31 +750,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                                            </td>
                                     </tr>
                                     <tr>
-                                        <td style="border: 1px solid #ddd; padding: 10px; font-weight: bold; background-color: #f9f9f9;">03.</td>
+                                        <td style="border: 1px solid #ddd; padding: 10px; font-weight: bold; background-color: #f9f9f9;">3</td>
                                         <td style="border: 1px solid #ddd; padding: 10px;"><a href="https://maps.app.goo.gl/M5E2rVBSQ3xWyZ1F7" target="_blank">Sushi North Inc</a></td>
                                         <td style="border: 1px solid #ddd; padding: 10px; text-align: left;">營業時間：11:30 - 19:00（以官方資訊為主）
                                             <br>這是第一天抵達黃刀，Evon 在飯店接駁路程推薦的。</td>
                                     </tr>
                                     <tr>
-                                        <td style="border: 1px solid #ddd; padding: 10px; font-weight: bold; background-color: #f9f9f9;">04.</td>
+                                        <td style="border: 1px solid #ddd; padding: 10px; font-weight: bold; background-color: #f9f9f9;">4</td>
                                         <td style="border: 1px solid #ddd; padding: 10px;"><a href="https://maps.app.goo.gl/1M5vDLt5n6b46foN6" target="_blank">Gold Range Bistro</a></td>
                                         <td style="border: 1px solid #ddd; padding: 10px; text-align: left;">營業時間：9:30 - 21:00（以官方資訊為主）
                                             <br>這也是 Evon 在飯店接駁路程推薦的。</td>
                                     </tr>
                                     <tr>
-                                        <td style="border: 1px solid #ddd; padding: 10px; font-weight: bold; background-color: #f9f9f9;">05.</td>
+                                        <td style="border: 1px solid #ddd; padding: 10px; font-weight: bold; background-color: #f9f9f9;">5</td>
                                         <td style="border: 1px solid #ddd; padding: 10px;"><a href="https://maps.app.goo.gl/R6N8z9VTfQ6dcaYp8" target="_blank">Zehabesha Traditional Ethiopian Restaurant</a></td>
                                         <td style="border: 1px solid #ddd; padding: 10px; text-align: left;">營業時間：11:30 - 20:00（以官方資訊為主）
                                             <br>行前做功課存的。</td>
                                     </tr>
                                     <tr>
-                                        <td style="border: 1px solid #ddd; padding: 10px; font-weight: bold; background-color: #f9f9f9;">06.</td>
+                                        <td style="border: 1px solid #ddd; padding: 10px; font-weight: bold; background-color: #f9f9f9;">6</td>
                                         <td style="border: 1px solid #ddd; padding: 10px;"><a href="https://maps.app.goo.gl/jkpxwcYYad5FGjwk8" target="_blank">Yk Wood Fired Pizzeria</a></td>
                                         <td style="border: 1px solid #ddd; padding: 10px; text-align: left;">營業時間：11:30 - 00:00（以官方資訊為主）
                                             <br>行前做功課存的。</td>
                                     </tr>
                                     <tr>
-                                        <td style="border: 1px solid #ddd; padding: 10px; font-weight: bold; background-color: #f9f9f9;">07.</td>
+                                        <td style="border: 1px solid #ddd; padding: 10px; font-weight: bold; background-color: #f9f9f9;">7</td>
                                         <td style="border: 1px solid #ddd; padding: 10px;"><a href="https://maps.app.goo.gl/U73bzxWzj983gHUY7" target="_blank">NWT Brewing Company / The Woodyard Brewhouse & Eatery</a></td>
                                         <td style="border: 1px solid #ddd; padding: 10px; text-align: left;">營業時間：12:00 - 00:00（以官方資訊為主）
                                             <br>走路經過看見前面停滿車，感覺是很厲害、很道地的餐酒館。</td>
