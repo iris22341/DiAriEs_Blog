@@ -30,22 +30,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
 ?>
 
 <!DOCTYPE html>
-<html>
-<head>
-    <title>雪山東峰單攻 - DiAriEs </title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-
-<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>雪山東峰單攻紀錄 - 👧DiAriEs</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
@@ -300,8 +290,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
 
         </section>
     </article>
-</body>
-</html>
 
     <!-- <div class="content-container" style="margin-top: 10px;">
         <h3 style="color: var(--primary-color); border-bottom: 2px solid #eee; padding-bottom: 10px;">
