@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 // --- 步驟 1：統一資料庫連線與存檔處理 (放在最頂端) ---
 $host = "localhost"; $username = "root"; $password = ""; $dbname = "diaries";
@@ -16,6 +17,16 @@ if (isset($_POST['submit_button'])) {
     exit();
 }
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>雪山東峰單攻 - DiAriEs </title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
 
 <!DOCTYPE html>
 <html lang="zh-TW">
