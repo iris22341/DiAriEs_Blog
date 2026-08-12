@@ -300,6 +300,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
 
         </section>
     </article>
+</body>
+</html>
 
     <!-- <div class="content-container" style="margin-top: 10px;">
         <h3 style="color: var(--primary-color); border-bottom: 2px solid #eee; padding-bottom: 10px;">
