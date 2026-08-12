@@ -244,7 +244,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                             機票 - 台灣到溫哥華 & 溫哥華到耶洛奈夫（來回）
                             </td>
                             <td style="padding: 15px; line-height: 2; vertical-align: middle;">
-                            2024/8/27
+                            T-7 個月
                             </td>
                             <td style="padding: 15px; line-height: 2; vertical-align: middle; word-break: break-word; text-align: left;">
                            <br>需分兩段買，一段是台灣到溫哥華（國際線）、另一段是溫哥華到耶洛奈夫（國內線）。
@@ -256,7 +256,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                             黃刀鎮住宿 - Nova Inn（五天四夜）
                             </td>
                             <td style="padding: 15px; line-height: 2; vertical-align: middle;">
-                            2024/8/31
+                            T-7 個月
                             </td>
                             <td style="padding: 15px; line-height: 2; vertical-align: middle; word-break: break-word; text-align: left;">
                             我們認為比起溫哥華住宿，得優先找黃刀鎮落腳處。
@@ -269,7 +269,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                             極光行程 - Morning Star
                             </td>
                             <td style="padding: 15px; line-height: 2; vertical-align: middle;">
-                            2024/9/1 ~ 2024/11/7
+                            T-6 個月
                             </td>
                             <td style="padding: 15px; line-height: 2; vertical-align: middle; word-break: break-word; text-align: left;">
                             先確定要參加五天四夜追極光行程，中間跟導遊討論加購項目跟禦寒衣物租借（原先跟 <a href ="https://www.instagram.com/cat56511?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Tinny</a> 聯繫，不過我們去黃刀時她已離職，到當地是由 Evon 帶團），導遊超可愛還跟我們說雪地健行 Cp 值低不推 XD
@@ -285,7 +285,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                             <br>訂機場接駁
                             </td>
                             <td style="padding: 15px; line-height: 2; vertical-align: middle;">
-                            ~ 2024/12/31
+                            T-3 個月
                             </td>
                             <td style="padding: 15px; line-height: 2; vertical-align: middle; word-break: break-word; text-align: left;">
                                 確認香港轉機這段不需申請港簽，因此只辦加拿大線上簽（eTA），申請教學可參考<a href="https://www.hellostudy.com.tw/why-hello-study/resources/documents/4883/canada-eta-full-tutorial/" target="_blank">網頁</a>。
@@ -297,7 +297,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                             <td style="padding: 15px; line-height: 2; vertical-align: middle; font-weight: normal;">整理行李
                             </td>
                             <td style="padding: 15px; line-height: 2; vertical-align: middle;">
-                            ~ 2025/02/21
+                            T-1 個月
                             </td>
                             <td style="padding: 15px; line-height: 2; vertical-align: middle; word-break: break-word; text-align: left;">
                                 發熱衣/發熱褲各 2 件、毛衣/保暖外衣 3 件、牛仔褲/外褲 3 件、內衣褲 3 套、毛帽 1 頂、圍巾 1 條、
