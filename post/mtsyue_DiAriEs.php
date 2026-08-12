@@ -1,20 +1,31 @@
-<!DOCTYPE html>
 <?php
-// --- 步驟 1：統一資料庫連線與存檔處理 (放在最頂端) ---
-$host = "localhost"; $username = "root"; $password = ""; $dbname = "diaries";
-$conn = mysqli_connect($host, $username, $password, $dbname);
-
-if (!$conn) {
-    die("連線失敗：" . mysqli_connect_error());
+// 1. 取得 Railway 連線字串
+$db_url = getenv("DATABASE_URL");
+if ($db_url) {
+    $url = parse_url($db_url);
+    $conn = mysqli_connect($url["host"], $url["user"], $url["pass"], substr($url["path"], 1), $url["port"]);
+    mysqli_query($conn, "SET time_zone = '+08:00'");
+    mysqli_set_charset($conn, "utf8mb4");
 }
 
-if (isset($_POST['submit_button'])) {
+// 2. 處理表單送出
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
+    // 【修正點 1】定義當前台灣時間，否則 SQL 會抓不到資料
+    date_default_timezone_set('Asia/Taipei');
+    $current_time = date("Y-m-d H:i:s");
+
     $name = mysqli_real_escape_string($conn, $_POST['name']);
     $content = mysqli_real_escape_string($conn, $_POST['content']);
-    $sql_insert = "INSERT INTO guestbook (name, content) VALUES ('$name', '$content')";
-    mysqli_query($conn, $sql_insert);
-    header("Location: mtsyue_DiArIEs.php"); 
-    exit();
+
+    // 寫入總表 guestbook，並標記為 crufunorth
+    $sql_insert = "INSERT INTO `guestbook` (post_id, name, content, created_at) VALUES ('mtsyue', '$name', '$content', '$current_time')";
+
+    if (mysqli_query($conn, $sql_insert)) {
+        header("Location: " . $_SERVER['PHP_SELF']);
+        exit;
+    } else {
+        echo "寫入失敗：" . mysqli_error($conn);
+    }
 }
 ?>
 
