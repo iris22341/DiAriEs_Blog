@@ -1,3 +1,34 @@
+<?php
+// 1. 取得 Railway 連線字串
+$db_url = getenv("DATABASE_URL");
+if ($db_url) {
+    $url = parse_url($db_url);
+    $conn = mysqli_connect($url["host"], $url["user"], $url["pass"], substr($url["path"], 1), $url["port"]);
+    mysqli_query($conn, "SET time_zone = '+08:00'");
+    mysqli_set_charset($conn, "utf8mb4");
+}
+
+// 2. 處理表單送出
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
+    // 【修正點 1】定義當前台灣時間，否則 SQL 會抓不到資料
+    date_default_timezone_set('Asia/Taipei');
+    $current_time = date("Y-m-d H:i:s");
+
+    $name = mysqli_real_escape_string($conn, $_POST['name']);
+    $content = mysqli_real_escape_string($conn, $_POST['content']);
+
+    // 寫入總表 guestbook，並標記為 crufunorth
+    $sql_insert = "INSERT INTO `guestbook` (post_id, name, content, created_at) VALUES ('yellowknief', '$name', '$content', '$current_time')";
+
+    if (mysqli_query($conn, $sql_insert)) {
+        header("Location: " . $_SERVER['PHP_SELF']);
+        exit;
+    } else {
+        echo "寫入失敗：" . mysqli_error($conn);
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
@@ -970,7 +1001,7 @@
         <h3>看看大家怎麼說</h3>
         <?php
         // 3. 讀取留言：只抓出這篇文章的內容
-        $sql_select = "SELECT * FROM guestbook WHERE post_id = 'aurura' ORDER BY id DESC"; 
+        $sql_select = "SELECT * FROM guestbook WHERE post_id = 'yellowknief' ORDER BY id DESC"; 
         $result = mysqli_query($conn, $sql_select);
 
         if ($result && mysqli_num_rows($result) > 0) {
