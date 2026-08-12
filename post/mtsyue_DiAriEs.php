@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
 <body>
 
     <header class="nav-bar">
-        <a href="../index.html"><span>←</span> 返回 DiAriEs</a>
+        <a href="../index.php"><span>←</span> 返回 DiAriEs</a>
     </header>
 
     <article class="content-container">
@@ -327,7 +327,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
             <h3>看看大家怎麼說</h3>
             <?php
             // --- 步驟 2：讀取留言 ---
-            $sql_select = "SELECT * FROM guestbook ORDER BY id DESC"; 
+            $sql_select = "SELECT * FROM guestbook WHERE post_id = 'mtsyue' ORDER BY id DESC"; 
             $result = mysqli_query($conn, $sql_select);
 
             if ($result && mysqli_num_rows($result) > 0) {
@@ -336,7 +336,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                     echo "  <div class='comment-info'>";
                     echo "    <span class='comment-name'>" . htmlspecialchars($row['name']) . "</span> ";
                     // 這裡根據你資料庫的實際時間欄位名稱調整，若不確定可先用 $row['id'] 測試
-                    $time_display = isset($row['created_date']) ? $row['created_date'] : (isset($row['created_date']) ? $row['created_date'] : "時間不詳");
+                    $time_display = !empty($row['created_at']) ? $row['created_at'] : "時間不詳";
                     echo "    於 " . $time_display . " 留言：";
                     echo "  </div>";
                     echo "  <div class='comment-text'>" . nl2br(htmlspecialchars($row['content'])) . "</div>";
