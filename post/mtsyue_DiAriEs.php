@@ -1,46 +1,22 @@
 <?php
-// 1. 取得 Railway 連線字串
-$db_url = getenv("DATABASE_URL");
-if ($db_url) {
-    $url = parse_url($db_url);
-    $conn = mysqli_connect($url["host"], $url["user"], $url["pass"], substr($url["path"], 1), $url["port"]);
-    mysqli_query($conn, "SET time_zone = '+08:00'");
-    mysqli_set_charset($conn, "utf8mb4");
+// --- 步驟 1：統一資料庫連線與存檔處理 (放在最頂端) ---
+$host = "localhost"; $username = "root"; $password = ""; $dbname = "diaries";
+$conn = mysqli_connect($host, $username, $password, $dbname);
+
+if (!$conn) {
+    die("連線失敗：" . mysqli_connect_error());
 }
 
-// 2. 處理表單送出
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
-    // 【修正點 1】定義當前台灣時間，否則 SQL 會抓不到資料
-    date_default_timezone_set('Asia/Taipei');
-    $current_time = date("Y-m-d H:i:s");
-
+if (isset($_POST['submit_button'])) {
     $name = mysqli_real_escape_string($conn, $_POST['name']);
     $content = mysqli_real_escape_string($conn, $_POST['content']);
-
-    // 寫入總表 guestbook，並標記為 crufunorth
-    $sql_insert = "INSERT INTO `guestbook` (post_id, name, content, created_at) VALUES ('mtsyue', '$name', '$content', '$current_time')";
-
-    if (mysqli_query($conn, $sql_insert)) {
-        header("Location: " . $_SERVER['PHP_SELF']);
-        exit;
-    } else {
-        echo "寫入失敗：" . mysqli_error($conn);
-    }
+    $sql_insert = "INSERT INTO guestbook (name, content) VALUES ('$name', '$content')";
+    mysqli_query($conn, $sql_insert);
+    header("Location: mtsyue_DiArIEs.php"); 
+    exit();
 }
 ?>
 
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>雪山東峰單攻 - DiAriEs </title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../style.css">
-</head>
-<body>
-
-	
-<!-- --- 第二部分：原本的文章與表單 HTML --- -->
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
@@ -52,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
 <body>
 
     <header class="nav-bar">
-        <a href="../index.php"><span>←</span> 返回 DiAriEs</a>
+        <a href="../index.html"><span>←</span> 返回 DiAriEs</a>
     </header>
 
     <article class="content-container">
@@ -95,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
             <h4>01. 行前準備</h4>
             <p><strong>(1) 裝備清單</strong></p>
             <div class="trip-table-wrapper">
-                <table class="trip-table">
+                <table class="trip-table table-fit">
                     <thead class="column-header">
                         <tr>
                             <th style="width: 33.3%;">必備物品</th>
@@ -130,10 +106,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
 
             <p><strong>(2) 申請項目</strong></p>
             <div class="trip-table-wrapper">
-                <table class="trip-table">
+                <table class="trip-table table-fit">
                     <thead class="column-header">
                         <tr>
-                            <th style="width: 20%;">項目</th>
+                            <th style="width: 40%;">項目</th>
                             <th>是否需要 / 備註</th>
                         </tr>
                     </thead>
@@ -159,16 +135,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
             </p>
 
             <div class="trip-table-wrapper">
-                <table class="trip-table">
+                <table class="trip-table table-fit">
                     <thead>
                         <tr class="date-header">
-                            <th colspan="2" style="width: 50%;">11/22 Day 0</th>
-                            <th colspan="2" style="width: 50%;">11/23 Day 1</th>
+                            <th colspan="2">11/22 Day 0</th>
+                            <th colspan="2">11/23 Day 1</th>
                         </tr>
                         <tr class="column-header">
-                            <th style="width: 20%;">時間</th>
+                            <th>時間</th>
                             <th>地點</th>
-                            <th style="width: 20%;">時間</th>
+                            <th>時間</th>
                             <th>地點</th>
                         </tr>
                     </thead>
@@ -303,7 +279,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
         </section>
     </article>
 
-
     <!-- <div class="content-container" style="margin-top: 10px;">
         <h3 style="color: var(--primary-color); border-bottom: 2px solid #eee; padding-bottom: 10px;">
             💬 留言區
@@ -326,49 +301,43 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
         </script>
     </div> -->
 
-
-</body>
-</html>
-
 <div class="container">
-    <h2>留言板</h2>
-    <form method="POST" action="">
-        <label>暱稱：</label>
-        <input type="text" name="name" required>
-        <label>留言內容：</label>
-        <textarea name="content" rows="4" required></textarea>
-        <input type="submit" name="submit_button" value="送出留言">
-    </form>
+        <h2>留言板</h2>
+        <form method="POST" action="">
+            <label>暱稱：</label>
+            <input type="text" name="name" required>
+            <label>留言內容：</label>
+            <textarea name="content" rows="4" required></textarea>
+            <input type="submit" name="submit_button" value="送出留言">
+        </form>
 
-    <div class="comment-list">
-        <h3>看看大家怎麼說</h3>
-        <?php
-        // 3. 讀取留言：只抓出這篇文章的內容
-        $sql_select = "SELECT * FROM guestbook WHERE post_id = 'mtsyue' ORDER BY id DESC"; 
-        $result = mysqli_query($conn, $sql_select);
+        <div class="comment-list">
+            <h3>看看大家怎麼說</h3>
+            <?php
+            // --- 步驟 2：讀取留言 ---
+            $sql_select = "SELECT * FROM guestbook ORDER BY id DESC"; 
+            $result = mysqli_query($conn, $sql_select);
 
-        if ($result && mysqli_num_rows($result) > 0) {
-            while($row = mysqli_fetch_assoc($result)) {
-                echo "<div class='comment-item'>";
-                echo "<div class='comment-info'>";
-                echo "<span class='comment-name'>" . htmlspecialchars($row['name']) . "</span> ";
-                
-                // 【修正點 2】確保名稱與 Railway 欄位名稱 created_at 一致
-                $time_display = !empty($row['created_at']) ? $row['created_at'] : "時間不詳";
-                
-                echo "於 " . $time_display . " 留言：";
-                echo "</div>";
-                echo "<div class='comment-text'>" . nl2br(htmlspecialchars($row['content'])) . "</div>";
-                echo "</div>";
+            if ($result && mysqli_num_rows($result) > 0) {
+                while($row = mysqli_fetch_assoc($result)) {
+                    echo "<div class='comment-item'>";
+                    echo "  <div class='comment-info'>";
+                    echo "    <span class='comment-name'>" . htmlspecialchars($row['name']) . "</span> ";
+                    // 這裡根據你資料庫的實際時間欄位名稱調整，若不確定可先用 $row['id'] 測試
+                    $time_display = isset($row['created_date']) ? $row['created_date'] : (isset($row['created_date']) ? $row['created_date'] : "時間不詳");
+                    echo "    於 " . $time_display . " 留言：";
+                    echo "  </div>";
+                    echo "  <div class='comment-text'>" . nl2br(htmlspecialchars($row['content'])) . "</div>";
+                    echo "</div>";
+                }
+            } else {
+                echo "<p>目前還沒有留言，快來當第一個吧！</p>";
+                if (!$result) echo "錯誤原因：" . mysqli_error($conn);
             }
-        } else {
-            echo "<p>目前還沒有留言，快來當第一個吧！</p>";
-            if (!$result) echo "錯誤原因：" . mysqli_error($conn);
-        }
-        mysqli_close($conn);
-        ?>
+            mysqli_close($conn);
+            ?>
+        </div>
     </div>
-</div>
 
 	    <footer>
             <p>© 2026 DiAriEs' Blog | Capturing every moment of dopamine.</p>
