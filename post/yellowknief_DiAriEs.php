@@ -30,66 +30,64 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
 ?>
 
 <!DOCTYPE html>
-<html>
-<head>
-    <title>加拿大黃刀追光之旅 - DiAriEs </title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="../style.css">
-
-<style>
-/* 黃刀鎮「分四類介紹」三欄表格：避免手機 NO. 欄被壓成直排 */
-.place-table {
-    width: 100%;
-    min-width: 0;
-    table-layout: fixed;
-}
-.place-table th:nth-child(1),
-.place-table td:nth-child(1) {
-    width: 64px !important;
-    min-width: 64px;
-    white-space: nowrap !important;
-    text-align: center;
-    word-break: keep-all !important;
-    overflow-wrap: normal !important;
-}
-.place-table th:nth-child(2),
-.place-table td:nth-child(2) {
-    width: 30% !important;
-    white-space: normal;
-    overflow-wrap: anywhere;
-}
-.place-table th:nth-child(3),
-.place-table td:nth-child(3) {
-    width: auto !important;
-    white-space: normal;
-    overflow-wrap: anywhere;
-}
-@media (max-width: 768px) {
-    .place-table th:nth-child(1),
-    .place-table td:nth-child(1) {
-        width: 56px !important;
-        min-width: 56px;
-        padding-left: 6px !important;
-        padding-right: 6px !important;
-    }
-    .place-table th:nth-child(2),
-    .place-table td:nth-child(2) {
-        width: 32% !important;
-    }
-}
-</style>
-</head>
-<body>
-
-
-<!-- --- 第二部分：原本的文章與表單 HTML --- -->
-<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>加拿大黃刀追光之旅 - 👧DiAriEs</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+    /* 只處理黃刀鎮「分四類介紹」的三欄表格，不影響其他表格 */
+    .place-table {
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    .place-table th:nth-child(1),
+    .place-table td:nth-child(1) {
+        width: 60px !important;
+        min-width: 60px;
+        max-width: 60px;
+        white-space: nowrap !important;
+        text-align: center;
+        word-break: normal !important;
+        overflow-wrap: normal !important;
+    }
+
+    .place-table th:nth-child(2),
+    .place-table td:nth-child(2) {
+        width: 32%;
+        white-space: normal !important;
+        word-break: break-word;
+        overflow-wrap: anywhere;
+    }
+
+    .place-table th:nth-child(3),
+    .place-table td:nth-child(3) {
+        width: auto;
+        white-space: normal !important;
+        word-break: break-word;
+        overflow-wrap: anywhere;
+        text-align: left;
+    }
+
+    @media (max-width: 768px) {
+        .place-table th:nth-child(1),
+        .place-table td:nth-child(1) {
+            width: 56px !important;
+            min-width: 56px;
+            max-width: 56px;
+            padding-left: 6px !important;
+            padding-right: 6px !important;
+        }
+
+        .place-table th:nth-child(2),
+        .place-table td:nth-child(2) {
+            width: 34%;
+        }
+    }
+    </style>
 </head>
 <body>
 
@@ -629,12 +627,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                         <br><strong>● 第一類：景點</strong>
                     </p>
                         <div class="trip-table-wrapper" style="overflow-x: auto;">
-                            <table class="trip-table table-fit place-table" cellspacing="1" style="width: 100%; border-collapse: separate; text-layout: left; table-layout: fixed; border: 1px solid #ddd;">
+                            <table class="trip-table table-fit place-table">
                                 <thead>
                                         <tr class="date-header" style="background-color: #2c3e50; color: white;">
-                                            <th style="width: 4%; border: 1px solid #ddd; padding: 10px;">NO.</th> 
-                                            <th style="width: 32%; border: 1px solid #ddd; padding: 10px;">地點</th>
-                                            <th style="width: 65%; border: 1px solid #ddd; padding: 10px;">memo</th>
+                                            <th>NO.</th> 
+                                            <th>地點</th>
+                                            <th>memo</th>
                                         </tr>
                                     </thead>
                                 <tbody>
@@ -692,12 +690,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                         <P><br><strong>● 第二類：超市</strong>
                         </p>
                         <div class="trip-table-wrapper" style="overflow-x: auto;">
-                            <table class="trip-table table-fit place-table" cellspacing="1" style="width: 100%; border-collapse: separate; text-layout: left; table-layout: fixed; border: 1px solid #ddd;">
+                            <table class="trip-table table-fit place-table">
                                 <thead>
                                         <tr class="date-header" style="background-color: #2c3e50; color: white;">
-                                            <th style="width: 4%; border: 1px solid #ddd; padding: 10px;">NO.</th> 
-                                            <th style="width: 32%; border: 1px solid #ddd; padding: 10px;">地點</th>
-                                            <th style="width: 65%; border: 1px solid #ddd; padding: 10px;">memo</th>
+                                            <th>NO.</th> 
+                                            <th>地點</th>
+                                            <th>memo</th>
                                         </tr>
                                     </thead>
                                 <tbody>
@@ -725,12 +723,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                         <P><br><strong>● 第三類：紀念品店</strong>
                         </p>
                         <div class="trip-table-wrapper" style="overflow-x: auto;">
-                            <table class="trip-table table-fit place-table" cellspacing="1" style="width: 100%; border-collapse: separate; text-layout: left; table-layout: fixed; border: 1px solid #ddd;">
+                            <table class="trip-table table-fit place-table">
                                 <thead>
                                         <tr class="date-header" style="background-color: #2c3e50; color: white;">
-                                            <th style="width: 4%; border: 1px solid #ddd; padding: 10px;">NO.</th> 
-                                            <th style="width: 32%; border: 1px solid #ddd; padding: 10px;">地點</th>
-                                            <th style="width: 65%; border: 1px solid #ddd; padding: 10px;">memo</th>
+                                            <th>NO.</th> 
+                                            <th>地點</th>
+                                            <th>memo</th>
                                         </tr>
                                     </thead>
                                 <tbody>
@@ -780,12 +778,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                         <P><br><strong>● 第四類：餐廳</strong>
                         </p>
                         <div class="trip-table-wrapper" style="overflow-x: auto;">
-                            <table class="trip-table table-fit place-table" cellspacing="1" style="width: 100%; border-collapse: separate; text-layout: left; table-layout: fixed; border: 1px solid #ddd;">
+                            <table class="trip-table table-fit place-table">
                                 <thead>
                                         <tr class="date-header" style="background-color: #2c3e50; color: white;">
-                                            <th style="width: 4%; border: 1px solid #ddd; padding: 10px;">NO.</th> 
-                                            <th style="width: 32%; border: 1px solid #ddd; padding: 10px;">地點</th>
-                                            <th style="width: 65%; border: 1px solid #ddd; padding: 10px;">memo</th>
+                                            <th>NO.</th> 
+                                            <th>地點</th>
+                                            <th>memo</th>
                                         </tr>
                                     </thead>
                                 <tbody>
