@@ -36,58 +36,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>加拿大黃刀追光之旅 - 👧DiAriEs</title>
     <link rel="stylesheet" href="../style.css">
-
-    <style>
-    /* 只處理黃刀鎮「分四類介紹」的三欄表格，不影響其他表格 */
-    .place-table {
-        width: 100%;
-        table-layout: fixed;
-    }
-
-    .place-table th:nth-child(1),
-    .place-table td:nth-child(1) {
-        width: 60px !important;
-        min-width: 60px;
-        max-width: 60px;
-        white-space: nowrap !important;
-        text-align: center;
-        word-break: normal !important;
-        overflow-wrap: normal !important;
-    }
-
-    .place-table th:nth-child(2),
-    .place-table td:nth-child(2) {
-        width: 32%;
-        white-space: normal !important;
-        word-break: break-word;
-        overflow-wrap: anywhere;
-    }
-
-    .place-table th:nth-child(3),
-    .place-table td:nth-child(3) {
-        width: auto;
-        white-space: normal !important;
-        word-break: break-word;
-        overflow-wrap: anywhere;
-        text-align: left;
-    }
-
-    @media (max-width: 768px) {
-        .place-table th:nth-child(1),
-        .place-table td:nth-child(1) {
-            width: 56px !important;
-            min-width: 56px;
-            max-width: 56px;
-            padding-left: 6px !important;
-            padding-right: 6px !important;
-        }
-
-        .place-table th:nth-child(2),
-        .place-table td:nth-child(2) {
-            width: 34%;
-        }
-    }
-    </style>
 </head>
 <body>
 
@@ -159,7 +107,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                 </ul>
                 </p>
             <div class="trip-table-wrapper">
-                <table class="trip-table">
+                <table class="trip-table table-scroll" style="--table-min-width: 1100px;">
                     <thead class="column-header">
                         <tr>
                             <th style="width: 8%; border: 1px solid #ddd; padding: 10px; background-color: #f9f9f9;"></th>
@@ -244,7 +192,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
             <h3 id="inform">二、黃刀追光規劃建議</h3>
             <h4> 01. 旅行社比較 </h4>
             <div class="trip-table-wrapper">
-                <table class="trip-table">
+                <table class="trip-table table-scroll" style="--table-min-width: 700px;">
                     <thead class="column-header">
                             <th style="background-color: #2c3e50; width: 12%; border: 1px solid #ddd; padding: 12px;"> </th>
                             <th style="background-color: #2c3e50; width: 22%; border: 1px solid #ddd; padding: 23px;"><a href="https://www.auroradreamtours.com/home-ct" target="_blank" style="color: white; text-decoration: underline;">Aurora Dream</a></th>
@@ -282,7 +230,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
             
             <h4>02. Check List</h4>
             <div class="trip-table-wrapper">
-                <table class="trip-table">
+                <table class="trip-table table-fit">
                     <thead class="column-header">
                         <tr>
                             <th style="width: 15%;">項目</th>
@@ -368,7 +316,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                 <li>此趟總費用，追光五天四夜行程再加上餐費、紀念品、溫哥華花費等，共<span style="color: red;"> $112,590 </span>NTD/人。</li>
             </ul>
                 <div class="trip-table-wrapper">
-                <table class="trip-table">
+                <table class="trip-table table-fit">
                     <thead class="column-header">
                         <tr>
                             <th style="width: 15%;">編號</th>
@@ -465,7 +413,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
             </div>
             <p><span style="color: blue;"> ※ 藍字為旅行社行程。</span></p>
             <div class="trip-table-wrapper" style="overflow-x: auto;">
-            <table class="trip-table" cellspacing="1" style="width: 100%; border-collapse: separate; text-layout: left; table-layout: fixed; min-width: 1400px; border: 1px solid #ddd;">
+            <table class="trip-table table-scroll" style="--table-min-width: 1400px;">
                 <thead>
                     <tr class="date-header" style="background-color: #2c3e50; color: white;">
                         <th style="width: 10%; border: 1px solid #ddd; padding: 10px;"></th> 
@@ -627,12 +575,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                         <br><strong>● 第一類：景點</strong>
                     </p>
                         <div class="trip-table-wrapper" style="overflow-x: auto;">
-                            <table class="trip-table table-fit place-table">
+                            <table class="trip-table table-fit">
                                 <thead>
                                         <tr class="date-header" style="background-color: #2c3e50; color: white;">
-                                            <th>NO.</th> 
-                                            <th>地點</th>
-                                            <th>memo</th>
+                                            <th style="width: 4%; border: 1px solid #ddd; padding: 10px;">NO.</th> 
+                                            <th style="width: 32%; border: 1px solid #ddd; padding: 10px;">地點</th>
+                                            <th style="width: 65%; border: 1px solid #ddd; padding: 10px;">memo</th>
                                         </tr>
                                     </thead>
                                 <tbody>
@@ -690,12 +638,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                         <P><br><strong>● 第二類：超市</strong>
                         </p>
                         <div class="trip-table-wrapper" style="overflow-x: auto;">
-                            <table class="trip-table table-fit place-table">
+                            <table class="trip-table table-fit">
                                 <thead>
                                         <tr class="date-header" style="background-color: #2c3e50; color: white;">
-                                            <th>NO.</th> 
-                                            <th>地點</th>
-                                            <th>memo</th>
+                                            <th style="width: 4%; border: 1px solid #ddd; padding: 10px;">NO.</th> 
+                                            <th style="width: 32%; border: 1px solid #ddd; padding: 10px;">地點</th>
+                                            <th style="width: 65%; border: 1px solid #ddd; padding: 10px;">memo</th>
                                         </tr>
                                     </thead>
                                 <tbody>
@@ -723,12 +671,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                         <P><br><strong>● 第三類：紀念品店</strong>
                         </p>
                         <div class="trip-table-wrapper" style="overflow-x: auto;">
-                            <table class="trip-table table-fit place-table">
+                            <table class="trip-table table-fit">
                                 <thead>
                                         <tr class="date-header" style="background-color: #2c3e50; color: white;">
-                                            <th>NO.</th> 
-                                            <th>地點</th>
-                                            <th>memo</th>
+                                            <th style="width: 4%; border: 1px solid #ddd; padding: 10px;">NO.</th> 
+                                            <th style="width: 32%; border: 1px solid #ddd; padding: 10px;">地點</th>
+                                            <th style="width: 65%; border: 1px solid #ddd; padding: 10px;">memo</th>
                                         </tr>
                                     </thead>
                                 <tbody>
@@ -778,12 +726,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                         <P><br><strong>● 第四類：餐廳</strong>
                         </p>
                         <div class="trip-table-wrapper" style="overflow-x: auto;">
-                            <table class="trip-table table-fit place-table">
+                            <table class="trip-table table-fit">
                                 <thead>
                                         <tr class="date-header" style="background-color: #2c3e50; color: white;">
-                                            <th>NO.</th> 
-                                            <th>地點</th>
-                                            <th>memo</th>
+                                            <th style="width: 4%; border: 1px solid #ddd; padding: 10px;">NO.</th> 
+                                            <th style="width: 32%; border: 1px solid #ddd; padding: 10px;">地點</th>
+                                            <th style="width: 65%; border: 1px solid #ddd; padding: 10px;">memo</th>
                                         </tr>
                                     </thead>
                                 <tbody>
@@ -1038,6 +986,59 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
             </ul>
         </section>
     </article>
+
+<div class="container">
+    <h2>留言板</h2>
+    <form method="POST" action="">
+        <label>暱稱：</label>
+        <input type="text" name="name" required>
+        <label>留言內容：</label>
+        <textarea name="content" rows="4" required></textarea>
+        <input type="submit" name="submit_button" value="送出留言">
+    </form>
+
+    <div class="comment-list">
+        <h3>看看大家怎麼說</h3>
+        <?php
+        // 3. 讀取留言：只抓出這篇文章的內容
+        $sql_select = "SELECT * FROM guestbook WHERE post_id = 'aurura' ORDER BY id DESC"; 
+        $result = mysqli_query($conn, $sql_select);
+
+        if ($result && mysqli_num_rows($result) > 0) {
+            while($row = mysqli_fetch_assoc($result)) {
+                echo "<div class='comment-item'>";
+                echo "<div class='comment-info'>";
+                echo "<span class='comment-name'>" . htmlspecialchars($row['name']) . "</span> ";
+                
+                // 【修正點 2】確保名稱與 Railway 欄位名稱 created_at 一致
+                $time_display = !empty($row['created_at']) ? $row['created_at'] : "時間不詳";
+                
+                echo "於 " . $time_display . " 留言：";
+                echo "</div>";
+                echo "<div class='comment-text'>" . nl2br(htmlspecialchars($row['content'])) . "</div>";
+                echo "</div>";
+            }
+        } else {
+            echo "<p>目前還沒有留言，快來當第一個吧！</p>";
+            if (!$result) echo "錯誤原因：" . mysqli_error($conn);
+        }
+        mysqli_close($conn);
+        ?>
+    </div>
+</div>
+
+	    <footer>
+            <p>© 2026 DiAriEs' Blog | Capturing every moment of dopamine.</p>
+            <div class="ig-link-container">
+                <a href="https://www.instagram.com/agirlwholovesexercise?utm_source=blog&utm_medium=footer&utm_campaign=trip1_xueshan" target="_blank" class="ig-link-wrapper">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczPmOjN3BxndCtx_6bwZ1Q6EESKQ4tesXBBEUNjHnby4eU6z_SQYLVOqOtHhRVCOJbda40wzWgHfuqyVNrzyd789_xtk4-_KzXhzQjoukWjGDOFpLMtS=w30-h30-p-k" alt="Instagram Icon" class="ig-icon">
+                    <span class="ig-link">Follow me on Instagram</span>
+                </a>
+            </div>
+        </footer>
+
+</body>
+</html>
 
 
 <div class="container">
