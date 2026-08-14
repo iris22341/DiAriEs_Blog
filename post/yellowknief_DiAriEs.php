@@ -28,6 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
     }
 }
 ?>
+	
 
 <!DOCTYPE html>
 <html lang="zh-TW">
@@ -1042,44 +1043,42 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
 
 
 <div class="container">
-    <h2>留言板</h2>
-    <form method="POST" action="">
-        <label>暱稱：</label>
-        <input type="text" name="name" required>
-        <label>留言內容：</label>
-        <textarea name="content" rows="4" required></textarea>
-        <input type="submit" name="submit_button" value="送出留言">
-    </form>
+        <h2>留言板</h2>
+        <form method="POST" action="">
+            <label>暱稱：</label>
+            <input type="text" name="name" required>
+            <label>留言內容：</label>
+            <textarea name="content" rows="4" required></textarea>
+            <input type="submit" name="submit_button" value="送出留言">
+        </form>
 
-    <div class="comment-list">
-        <h3>看看大家怎麼說</h3>
-        <?php
-        // 3. 讀取留言：只抓出這篇文章的內容
-        $sql_select = "SELECT * FROM guestbook WHERE post_id = 'yellowknief' ORDER BY id DESC"; 
-        $result = mysqli_query($conn, $sql_select);
+        <div class="comment-list">
+            <h3>看看大家怎麼說</h3>
+            <?php
+            // --- 步驟 2：讀取留言 ---
+            $sql_select = "SELECT * FROM guestbook WHERE post_id = 'yellowknief' ORDER BY id DESC"; 
+            $result = mysqli_query($conn, $sql_select);
 
-        if ($result && mysqli_num_rows($result) > 0) {
-            while($row = mysqli_fetch_assoc($result)) {
-                echo "<div class='comment-item'>";
-                echo "<div class='comment-info'>";
-                echo "<span class='comment-name'>" . htmlspecialchars($row['name']) . "</span> ";
-                
-                // 【修正點 2】確保名稱與 Railway 欄位名稱 created_at 一致
-                $time_display = !empty($row['created_at']) ? $row['created_at'] : "時間不詳";
-                
-                echo "於 " . $time_display . " 留言：";
-                echo "</div>";
-                echo "<div class='comment-text'>" . nl2br(htmlspecialchars($row['content'])) . "</div>";
-                echo "</div>";
+            if ($result && mysqli_num_rows($result) > 0) {
+                while($row = mysqli_fetch_assoc($result)) {
+                    echo "<div class='comment-item'>";
+                    echo "  <div class='comment-info'>";
+                    echo "    <span class='comment-name'>" . htmlspecialchars($row['name']) . "</span> ";
+                    // 這裡根據你資料庫的實際時間欄位名稱調整，若不確定可先用 $row['id'] 測試
+                    $time_display = !empty($row['created_at']) ? $row['created_at'] : "時間不詳";
+                    echo "    於 " . $time_display . " 留言：";
+                    echo "  </div>";
+                    echo "  <div class='comment-text'>" . nl2br(htmlspecialchars($row['content'])) . "</div>";
+                    echo "</div>";
+                }
+            } else {
+                echo "<p>目前還沒有留言，快來當第一個吧！</p>";
+                if (!$result) echo "錯誤原因：" . mysqli_error($conn);
             }
-        } else {
-            echo "<p>目前還沒有留言，快來當第一個吧！</p>";
-            if (!$result) echo "錯誤原因：" . mysqli_error($conn);
-        }
-        mysqli_close($conn);
-        ?>
+            mysqli_close($conn);
+            ?>
+        </div>
     </div>
-</div>
 
 	    <footer>
             <p>© 2026 DiAriEs' Blog | Capturing every moment of dopamine.</p>
