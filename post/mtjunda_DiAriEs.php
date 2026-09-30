@@ -239,11 +239,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                     <br>辦完入山，找了 7-11 停車場作為車宿地點，Ben哥已在後車廂鋪好床，看著舒適的床只能忍痛讓丘軒睡 XD 其他四個女森睡丘軒車上，駕駛座、副駕躺平睡兩人、後座一人平躺、後車箱睡一人，車窗網讓車內不至於太悶，意外地進入深層睡眠。06:00 被陽光+山友對話聲吵醒，一打開後車廂只見人潮聚集在便利商店門口，廁所也已大排長龍，快速整裝、吃完早餐及暈車藥後(謝謝ASH的抖內)，準備前往車程 7 分鐘的檢查哨換接駁！
                     </p>
                     <figure>
-                    <img src="https://lh3.googleusercontent.com/pw/AP1GczMuYkjfK9_lV1eMRXx-ve-7LvGDMqFrtg8UUev2jpgf6sr3RIBTf1vd9zew_BnhdOTVirL-ClGk3L4sTo21wEcyCw2Xog5KmXip6AoIMVPSoXbM-lGv=w600-h315-p-k" alt="幸運貓貓" class="no-hover">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczMuYkjfK9_lV1eMRXx-ve-7LvGDMqFrtg8UUev2jpgf6sr3RIBTf1vd9zew_BnhdOTVirL-ClGk3L4sTo21wEcyCw2Xog5KmXip6AoIMVPSoXbM-lGv=w600-h400-p-k" alt="幸運貓貓" class="no-hover">
                         <figcaption>▲ 員警人很好，借我們上廁所，還很幸運地遇見喵所長。</figcaption>
                     </figure>
                     <figure>
-                    <img src="https://lh3.googleusercontent.com/pw/AP1GczPWDoRN6fAOvKWsQLEXx3UeGXc48W_Gdh1_IU3_44y9jQ2d2Y9H7bjCI-muvF8pI55Xo_JsaWuGQMwaqCZwHJzSC6noIGl37wiwviUCV29w4COiEXtB=w600-h315-p-k" alt="車宿環境1" class="no-hover">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczPWDoRN6fAOvKWsQLEXx3UeGXc48W_Gdh1_IU3_44y9jQ2d2Y9H7bjCI-muvF8pI55Xo_JsaWuGQMwaqCZwHJzSC6noIGl37wiwviUCV29w4COiEXtB=w600-h400-p-k" alt="車宿環境1" class="no-hover">
                         <figcaption>▲ Ben哥的高級車宿。</figcaption>
                     </figure>
                 </li>
@@ -254,11 +254,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                     <br>接下來還有一小時的車程才會到郡大林道 32k 登山口處，後面的林道路面沒那麼寬，不易會車，也比較原始，需要高底盤才不易刁車，我們就看到一台福斯卡住，司機們用對講機開玩笑說讓它玩一下，要繳學費才要去救它 XD 看到這個畫面，就覺得我們選對接駁了，司機開車技術也 100分，只是坐最後排的 ASH 頭還是撞到不少次，不過整體算很舒適，至少比閂山鈴鳴的體感舒服很多。</p>
                     <figure> 
                         <img src="https://lh3.googleusercontent.com/pw/AP1GczMMWZw3xcU102-7cDWY1zi9ZuOwXfJ_g2GM4CGt87icccL0jB0W8Db2CyYzWmvNUMt5DeD8v8cPWxBvb23HPnv2T7KwcWgjHSC69-wOmqB5gGQy02Av=w600-h800-p-k" alt="接駁資訊" class="no-hover">
-                        <img src="https://lh3.googleusercontent.com/pw/AP1GczPwRJvLzRtV6tvUqrnbfWIZj-7D8z7kn0pz0ELtKg8SpzrNEx-Fw4YQoxdpAMIIzFVR0A_1fRbeuvUW4TecMGWkrGTrbmH0unvWTkmKCm3m5Z9DUMlu=w600-h315-p-k" alt="接駁車車" class="no-hover">
+                        <img src="https://lh3.googleusercontent.com/pw/AP1GczPwRJvLzRtV6tvUqrnbfWIZj-7D8z7kn0pz0ELtKg8SpzrNEx-Fw4YQoxdpAMIIzFVR0A_1fRbeuvUW4TecMGWkrGTrbmH0unvWTkmKCm3m5Z9DUMlu=w600-h400-p-k" alt="接駁車車" class="no-hover">
                         <figcaption>▲ 專業接駁推推楊培恩大哥。</figcaption>
                     </figure>
                     <figure> 
-                        <img src="https://lh3.googleusercontent.com/pw/AP1GczNVjb3BhlY5pa1g7FcMyVP_1OQY6RkYYvoC7lzoTeOVcW3oAIoPMhZpr8L_sXZfciwRC417Pu_sLxbHsJX9w1bMM6QJ25OuFP3pAdSQM1IBod3PqQgw=w600-h315-p-k" alt="廁所拍拍1" class="no-hover">
+                        <img src="https://lh3.googleusercontent.com/pw/AP1GczNVjb3BhlY5pa1g7FcMyVP_1OQY6RkYYvoC7lzoTeOVcW3oAIoPMhZpr8L_sXZfciwRC417Pu_sLxbHsJX9w1bMM6QJ25OuFP3pAdSQM1IBod3PqQgw=w600-h400-p-k" alt="廁所拍拍1" class="no-hover">
                         <figcaption>▲ 天氣超級無敵霹靂好，山巒綿延的樣子清晰可見。</figcaption>
                     </figure>
                 </li>
@@ -268,14 +268,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                     <br>進入樹叢小路前不小心走錯路，聽見後面登山團的大姐大喊：「你不要跟著他們走，他們走錯路了」，提醒走在前方的大哥 and 我們：）然後就開始各種閃躲樹枝、注意反作用力，有一段落差比較大需要拉繩的地形，然後就來到岩石拍照點。
                     </p>
                     <figure> 
-                        <img src="https://lh3.googleusercontent.com/pw/AP1GczNA154v5BTWJ-emvlta9rWcXtG-wDXJbxpVlMv4CK9C-ENKPz4jjtLzXjGhpA4EhymE29ZortZKqO_gPRtMK2OQHzWfeYtBfoRBXm2Hfrf2naeVzjO9=w600-h315-p-k" alt="前半段上坡">
-                        <img src="https://lh3.googleusercontent.com/pw/AP1GczMV5XbTgLtuHwOsNlbiC0WnVeEdPmDH2iizaZOiRVi67ZULjZfvNcVT_8MTYF4mlx8SCwBBYMCqZSmKTtHOHsanQO-DGcVyQkqXiAbl9IpXotooqn_1=w600-h315-p-k" alt="望鄉山三角點">
+                        <img src="https://lh3.googleusercontent.com/pw/AP1GczNA154v5BTWJ-emvlta9rWcXtG-wDXJbxpVlMv4CK9C-ENKPz4jjtLzXjGhpA4EhymE29ZortZKqO_gPRtMK2OQHzWfeYtBfoRBXm2Hfrf2naeVzjO9=w600-h400-p-k" alt="前半段上坡">
+                        <img src="https://lh3.googleusercontent.com/pw/AP1GczMV5XbTgLtuHwOsNlbiC0WnVeEdPmDH2iizaZOiRVi67ZULjZfvNcVT_8MTYF4mlx8SCwBBYMCqZSmKTtHOHsanQO-DGcVyQkqXiAbl9IpXotooqn_1=w600-h400-p-k" alt="望鄉山三角點">
                         <img src="https://lh3.googleusercontent.com/pw/AP1GczPaOvpoKc69-q99kAD6-cmKisJTgDmdOmxQcSvTvmx7dfyIOXkOHuOhv6WBpqhJcSR8Ej8E0LdWyZ07pZQnqSw7RojneyvgUm7gi_WzciVptMTiqYUL=w600-h800-p-k" alt="望鄉山三角點指示牌">
                         <figcaption>▲ 前半段的上坡，到望鄉山三角點小休一下。</figcaption>
                     </figure>
                     <figure> 
-                        <img src="https://lh3.googleusercontent.com/pw/AP1GczNrebSqvZjWYcdBSfdfprdF8zgFVEE_JCcIakTilA3LQU0l_3xK_GUA823dsLuuqu7mdHGltuB0GvrAYSeCv9IRbozTx-xApE0UFU0tz-qyhvePijB9=w600-h315-p-k" alt="迷路處">
-                        <img src="https://lh3.googleusercontent.com/pw/AP1GczOHUJvvhLor0I67TccTR5cQUep8XCzqqNg091l_wtz5ukgy36pSmfOJ8lHp2wmdLJrtYNS_nSxvRRiydkNmeNm5gNcqbYE8Spzf3WGPm6SP3Qqis8eB=w600-h315-p-k" alt="展望極佳的點">
+                        <img src="https://lh3.googleusercontent.com/pw/AP1GczNrebSqvZjWYcdBSfdfprdF8zgFVEE_JCcIakTilA3LQU0l_3xK_GUA823dsLuuqu7mdHGltuB0GvrAYSeCv9IRbozTx-xApE0UFU0tz-qyhvePijB9=w600-h400-p-k" alt="迷路處">
+                        <img src="https://lh3.googleusercontent.com/pw/AP1GczOHUJvvhLor0I67TccTR5cQUep8XCzqqNg091l_wtz5ukgy36pSmfOJ8lHp2wmdLJrtYNS_nSxvRRiydkNmeNm5gNcqbYE8Spzf3WGPm6SP3Qqis8eB=w600-h400-p-k" alt="展望極佳的點">
                         <figcaption>▲ 聊著聊著走錯路，正確是左邊的路喔~然後就來到展望極佳的路段，伴隨清晰可見的玉山。</figcaption>
                     </figure>
                 </li>
@@ -286,8 +286,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                     疏通後是一段緩上，再經過一個拉繩地形，不知不覺來到 3k 牌牌，還差 0.6k 就能登頂囉！
                     </p>
                     <figure> 
-                        <img src="https://lh3.googleusercontent.com/pw/AP1GczNsSGkPrZnHxOQ1Avr296l68jj-a-WMgxEpeVGdeTtghTp8-a0bGoYqnaYdfUA0O3T_HBz3u5JzuSKITVV9yb3drIUfbmuA-5ur9lPNvPvnYQX1Ggtb=w600-h315-p-k" alt="岩石拍照點的健美選手">
-                        <img src="https://lh3.googleusercontent.com/pw/AP1GczM0elSEykkOOgkLL72KcdpgRLrn_C07hwAfu_3YI7YWy5P3FuTJxeJI_v6q1DpCLcCviL9UOyYHVzD5D7DzG7a70_44LXOEnkcNj5zLmbx2kkQz1oY0=w600-h315-p-k" alt="走在稜線上">
+                        <img src="https://lh3.googleusercontent.com/pw/AP1GczNsSGkPrZnHxOQ1Avr296l68jj-a-WMgxEpeVGdeTtghTp8-a0bGoYqnaYdfUA0O3T_HBz3u5JzuSKITVV9yb3drIUfbmuA-5ur9lPNvPvnYQX1Ggtb=w600-h400-p-k" alt="岩石拍照點的健美選手">
+                        <img src="https://lh3.googleusercontent.com/pw/AP1GczM0elSEykkOOgkLL72KcdpgRLrn_C07hwAfu_3YI7YWy5P3FuTJxeJI_v6q1DpCLcCviL9UOyYHVzD5D7DzG7a70_44LXOEnkcNj5zLmbx2kkQz1oY0=w600-h400-p-k" alt="走在稜線上">
                         <figcaption>▲ 幫健美選手與岩石合照後繼續前行，來到稜線，我們變得好渺小。</figcaption>
                     </figure>
                 </li>
@@ -297,8 +297,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                     大概等了 15分鐘，終於輪到我們，先個拍，拍完再到另一個人較少的牌牌拍合照，拍完便速速下山。
                     </p>
                 <figure> 
-                    <img src="https://lh3.googleusercontent.com/pw/AP1GczNIjAYMUpUICZZ1A7cVqU2EA97eQkegkM-w_Q_lKrruS8GC6gTgjddhHgImdx8JLDAd2WJphztDTD1DrZ2UhVqVf6oMIQ2QFUTox2e3L-mK7kS1iGXU=w600-h315-p-k" alt="排隊拍照的隊伍">
-                    <img src="https://lh3.googleusercontent.com/pw/AP1GczOaV502PZAHlQxsszRZOMOSTIafswFmTgj6c5cnopGUwsR-FIne8G-E4jbgZDnmVvYsUvNuD5TpyaIsfkMH3H-vU8EJfxrDZgg5wATLJ-E9lj36rGCa=w600-h315-p-k" alt="登頂合照">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczNIjAYMUpUICZZ1A7cVqU2EA97eQkegkM-w_Q_lKrruS8GC6gTgjddhHgImdx8JLDAd2WJphztDTD1DrZ2UhVqVf6oMIQ2QFUTox2e3L-mK7kS1iGXU=w600-h400-p-k" alt="排隊拍照的隊伍">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczOaV502PZAHlQxsszRZOMOSTIafswFmTgj6c5cnopGUwsR-FIne8G-E4jbgZDnmVvYsUvNuD5TpyaIsfkMH3H-vU8EJfxrDZgg5wATLJ-E9lj36rGCa=w600-h400-p-k" alt="登頂合照">
                     <figcaption>▲ 看不到排隊尾巴的隊伍，看大合照時才發現無所不在的健美選手。</figcaption>
                 </figure>
                 </li>
@@ -307,8 +307,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                     <p>下山時玩最久的路段是枯木箭竹林，鞋子也被玩到開口笑，第一雙登山鞋壽終正寢。感謝邱軒用大砲紀錄大家最自然的樣子，不知不覺回到了望鄉山三角點，在這裡遇到有趣的大哥，大哥的拍照姿勢超活潑，值得只會比耶的年輕人學習 XD
                     </p>
                     <figure>
-                    <img src="https://lh3.googleusercontent.com/pw/AP1GczOk7lKY7jKTvXJXGFqH4QeC9Sk3jO25eVMyaQ9INWWc554i7PIqDCTCxZIhtMvy_zqm_FAkCKaslcsFjymuXQaGy0S-xP5iKlOk20fWKIcoDJUrdns-=w600-h315-p-k" alt="枯木箭竹林玩耍">
-                    <img src="https://lh3.googleusercontent.com/pw/AP1GczMgAwrfh4mTF8dMJfPY2d-ZS7ULud39HbBTVnA2901ayL0yIY0WrumZgtOQ9mMY3Qh6OqpVDhKF6t8Yc84rZdbAsBvSCz9MZQz2dp_JSMubhnSuXd9L=w600-h315-p-k" alt="望鄉山三角點">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczOk7lKY7jKTvXJXGFqH4QeC9Sk3jO25eVMyaQ9INWWc554i7PIqDCTCxZIhtMvy_zqm_FAkCKaslcsFjymuXQaGy0S-xP5iKlOk20fWKIcoDJUrdns-=w600-h400-p-k" alt="枯木箭竹林玩耍">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczMgAwrfh4mTF8dMJfPY2d-ZS7ULud39HbBTVnA2901ayL0yIY0WrumZgtOQ9mMY3Qh6OqpVDhKF6t8Yc84rZdbAsBvSCz9MZQz2dp_JSMubhnSuXd9L=w600-h400-p-k" alt="望鄉山三角點">
                     <figcaption>▲ 在枯木箭竹林聊天的我們，還有不起眼的望鄉山三角點。</figcaption>
                     </figure>
                 </li>
@@ -316,9 +316,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                 <li>
                     <p><strong>14:45 快樂登出！ </strong>接駁準備了冰冰涼涼的飲料，乾杯慶祝順利下山，還有憶璇的初百岳成功！
                     </p>
-                    <img src="https://lh3.googleusercontent.com/pw/AP1GczMsYHbZ7iBoLM52E4WWhCKscSvP3HA9IO8sSPYAg7E3rTwQ4yMN3o8LUFjMIvzH0d-vcY3tPe-4IoMS-I2fuOcgEAaMCFpinUmi1eQfNkePVsnLAswM=w600-h315-p-k" alt="成功登出合照">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczMsYHbZ7iBoLM52E4WWhCKscSvP3HA9IO8sSPYAg7E3rTwQ4yMN3o8LUFjMIvzH0d-vcY3tPe-4IoMS-I2fuOcgEAaMCFpinUmi1eQfNkePVsnLAswM=w600-h400-p-k" alt="成功登出合照">
                     <figure>
-                    <img src="https://lh3.googleusercontent.com/pw/AP1GczM-cRPfmj2ZSCWYcs0HioUE5JfxlCFDLIJMPcvVl_RzsqxfsdcAHgp7zEYO54Ty8ckg2uhW41aaU0gA84NiuPZaz67Q6Whj69PitdJ6oQFtzOtOATqX=w600-h315-p-k" alt="可樂乾杯">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczM-cRPfmj2ZSCWYcs0HioUE5JfxlCFDLIJMPcvVl_RzsqxfsdcAHgp7zEYO54Ty8ckg2uhW41aaU0gA84NiuPZaz67Q6Whj69PitdJ6oQFtzOtOATqX=w600-h400-p-k" alt="可樂乾杯">
                     <figcaption>▲ 用快樂肥宅水慶祝郡大山大成功。</figcaption>
                     </figure>
                 </li>
@@ -327,7 +327,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                     <p><strong>16:45 郡大檢查哨換回車車</strong>，回程在接駁車上睡鼠，唯一清醒的時候剛好遇到一台保時捷，林道真的很小條，只有路面寬一點的地方才能會車，只見司機快速倒退，保時捷也緊貼山壁這才成功，然後就很突然的回到 0k 處。
                     </p>
                     <figure>
-                    <img src="https://lh3.googleusercontent.com/pw/AP1GczPjSzCX4vYni3D_lsd_7IQ2TPiNa_jgG6hOGteNKa6Cu6zgN_IwD3Unm5Erp1v1EJ98nUVAKXVADPfG3-F33Iazu5cZs5jLhU58LGqx-RonB6_o4wPN=w600-h315-p-k" alt="0k 處">
+                    <img src="https://lh3.googleusercontent.com/pw/AP1GczPjSzCX4vYni3D_lsd_7IQ2TPiNa_jgG6hOGteNKa6Cu6zgN_IwD3Unm5Erp1v1EJ98nUVAKXVADPfG3-F33Iazu5cZs5jLhU58LGqx-RonB6_o4wPN=w600-h400-p-k" alt="0k 處">
                     <figcaption>▲ 郡大林道開放時間為每日 08：00 - 17：00，要上山的朋朋記得抓好時間。</figcaption>
                     </figure>
                 </li>
