@@ -286,8 +286,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
                         <tr><td>02</td><td>7.7 k</td><td>+23/-29</td><td>ㄚ純</td><td></td><td></td></tr>
                         <tr><td>03</td><td>6.6 k</td><td>+19/-199</td><td>Emma</td><td></td><td></td></tr>
                         <tr><td>04</td><td>7.1 k</td><td>+24/-25</td><td>Hugo</td><td></td><td></td></tr>
-                        <tr><td>05</td><td>6.2 k</td><td>+37/-36</td><td>達哥</td><td>4/11 7:22</td><td>宜蘭頭城</td></tr>
-                        <tr><td>06</td><td>6.2 k</td><td>+38/-36</td><td>陳律</td><td>4/11 8:19</td><td>宜蘭頭城</td></tr>
+                        <tr><td>05</td><td>6.2 k</td><td>+37/-36</td><td>達哥</td><td>4/11 07:22</td><td>宜蘭頭城</td></tr>
+                        <tr><td>06</td><td>6.2 k</td><td>+38/-36</td><td>陳律</td><td>4/11 08:19</td><td>宜蘭頭城</td></tr>
                         <tr><td>07</td><td>6.2 k</td><td>+39/-39</td><td>Emma</td><td></td><td></td></tr>
                         <tr><td>08</td><td>7.2 k</td><td>+67/-49</td><td>ㄚ純</td><td></td><td></td></tr>
                         <tr><td>09</td><td>6.8 k</td><td>+82/-81</td><td>達哥</td><td></td><td></td></tr>
@@ -343,7 +343,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
             <ul class="timeline-list">
                 <li>
                     <p><strong>04/10 19:30 陸續抵達民宿。</strong>
-                    <br>由於我們是 04/11 4:30 起跑梯次，所以前一晚就先訂了武荖坑附近的民宿。<br>
+                    <br>由於我們是 04/11 04:30 起跑梯次，所以前一晚就先訂了武荖坑附近的民宿。<br>
                     民宿大概在行前會開完就開始找，打了三間都被訂完，意外接到一通電話，老闆娘說還有另一棟<a href="https://maps.app.goo.gl/QAJbAnZzWKBJChBV6" target="_blank">愛幸福小棧</a>可優先留給我們，包棟 5,600 元，這麼佛的價格先答應再說。
                     </br>房間配置是一間 5 人房、3 人房以及 2 人房，後來老闆娘還有在 5 人房幫我們加床，整體空間寬敞、乾淨，女生們住 3 人房，兩張床床頭都有插頭，浴室有提供沐浴乳、洗髮精，還有一個小冰箱，床躺起來蠻舒服的，大概 23:30 大家已躺平。
                     </p>
