@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
 
         <h1>✨加拿大黃刀解鎖極光夢｜10 萬元、7 天假 暢玩追光成功機率最高的小鎮</h1>
         <div class="post-meta">
-            📅 日期：2025/2/22-3/3 | 👤 作者：ㄚ純
+            📅 日期：2025/02/22-03/03 | 👤 作者：ㄚ純
         </div>
 
         <div class="gear-box">
