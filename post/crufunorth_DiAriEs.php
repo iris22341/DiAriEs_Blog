@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_button'])) {
 
         <h1>挑戰拚一個台灣第三站｜2026 夸父追日北台灣站 從蘇澳跑到淡水 熱累盈眶！</h1>
         <div class="post-meta">
-            📅 日期：2026/4/11-4/12 | 👤 作者：ㄚ純
+            📅 日期：2026/04/11-04/12 | 👤 作者：ㄚ純
         </div>
 
         <div class="gear-box">
